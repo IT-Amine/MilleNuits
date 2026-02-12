@@ -920,10 +920,12 @@
 <p>Cette section détaille la création de la machine virtuelle de référence qui servira de base au déploiement sur l'ensemble du parc informatique de <strong>Mille Nuits</strong>.</p>
 <h2 id="1-objectif-de-la-mission">1. Objectif de la mission</h2>
 <p>L'objectif est de préparer un environnement <strong>Windows 11</strong> propre, configuré avec les standards de l'entreprise, afin de pouvoir le cloner ultérieurement sur 19 autres postes.</p>
-<p><strong>Contraintes respectées :</strong>
-* Système d'exploitation : <strong>Windows 11 Pro</strong>
-* Compte administrateur local imposé.
-* Suite logicielle standard installée.</p>
+<p><strong>Contraintes respectées :</strong></p>
+<ul>
+<li>Système d'exploitation : <strong>Windows 11 Pro</strong></li>
+<li>Compte administrateur local imposé.</li>
+<li>Suite logicielle standard installée.</li>
+</ul>
 <hr />
 <h2 id="2-configuration-de-la-machine-virtuelle-virtualbox">2. Configuration de la Machine Virtuelle (VirtualBox)</h2>
 <p>La VM a été paramétrée pour respecter les prérequis matériels stricts de Windows 11 (TPM 2.0 et Secure Boot).</p>
@@ -960,11 +962,13 @@
 <hr />
 <h2 id="3-installation-du-systeme-bypass-compte-microsoft">3. Installation du Système (Bypass Compte Microsoft)</h2>
 <p>Pour respecter la contrainte d'un <strong>compte local</strong> (et non un compte Microsoft en ligne), une procédure spécifique a été appliquée lors de l'installation (OOBE).</p>
-<p><strong>Procédure appliquée :</strong>
-1.  Lancement de l'installation standard de Windows 11.
-2.  À l'écran de connexion réseau, déconnexion physique (ou virtuelle) de la carte réseau.
-3.  Ouverture de l'invite de commande avec <code>MAJ + F10</code>.
-4.  Exécution de la commande de contournement :</p>
+<p><strong>Procédure appliquée :</strong></p>
+<ol>
+<li>Lancement de l'installation standard de Windows 11.</li>
+<li>À l'écran de connexion réseau, déconnexion physique (ou virtuelle) de la carte réseau.</li>
+<li>Ouverture de l'invite de commande avec <code>MAJ + F10</code>.</li>
+<li>Exécution de la commande de contournement :</li>
+</ol>
 <pre><code>    OOBE\BYPASSNRO
 </code></pre>
 <ol>

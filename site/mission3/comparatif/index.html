@@ -1014,28 +1014,62 @@ Pour éviter une installation manuelle fastidieuse, nous avons comparé trois so
 <hr />
 <h2 id="analyse-detaillee">Analyse Détaillée</h2>
 <h3 id="1-fog-project">1. FOG Project</h3>
-<p>Solution de clonage open-source basée sur une interface web.
-* <strong>Fonctionnalités :</strong> Capture et déploiement d'images, gestion d'inventaire, déploiement de logiciels (Snapins), gestion des imprimantes.
-* <strong>Points forts :</strong> Gratuit, interface web intuitive, gestion du <strong>Multicast</strong> (permet de cloner les 20 postes en même temps sans saturation), fonctionne sur le serveur Linux MN08 disponible.
-* <strong>Points faibles :</strong> Configuration initiale du réseau (DHCP/PXE) parfois délicate.</p>
+<p>Solution de clonage open-source basée sur une interface web.</p>
+<ul>
+<li>
+<p><strong>Fonctionnalités :</strong> Capture et déploiement d'images, gestion d'inventaire, déploiement de logiciels (Snapins), gestion des imprimantes.</p>
+</li>
+<li>
+<p><strong>Points forts :</strong> Gratuit, interface web intuitive, gestion du <strong>Multicast</strong> (permet de cloner les 20 postes en même temps sans saturation), fonctionne sur le serveur Linux MN08 disponible.</p>
+</li>
+<li>
+<p><strong>Points faibles :</strong> Configuration initiale du réseau (DHCP/PXE) parfois délicate.</p>
+</li>
+</ul>
 <h3 id="2-clonezilla-server-se">2. Clonezilla Server (SE)</h3>
-<p>La version serveur du célèbre outil de clonage de disque.
-* <strong>Fonctionnalités :</strong> Clonage de masse efficace.
-* <strong>Points forts :</strong> Très léger, très rapide, gratuit.
-* <strong>Points faibles :</strong> Pas d'interface de gestion centralisée persistante (pas de base de données des machines), interface utilisateur "vieillissante" (ncurses), moins adapté à la gestion de parc sur le long terme.</p>
+<p>La version serveur du célèbre outil de clonage de disque.</p>
+<ul>
+<li>
+<p><strong>Fonctionnalités :</strong> Clonage de masse efficace.</p>
+</li>
+<li>
+<p><strong>Points forts :</strong> Très léger, très rapide, gratuit.</p>
+</li>
+<li>
+<p><strong>Points faibles :</strong> Pas d'interface de gestion centralisée persistante (pas de base de données des machines), interface utilisateur "vieillissante" (ncurses), moins adapté à la gestion de parc sur le long terme.</p>
+</li>
+</ul>
 <h3 id="3-microsoft-wds-mdt">3. Microsoft WDS + MDT</h3>
-<p>La solution standard de Microsoft pour les entreprises.
-* <strong>Fonctionnalités :</strong> Déploiement natif, injection de pilotes dynamique, personnalisation poussée.
-* <strong>Points forts :</strong> Intégration parfaite avec l'Active Directory et Windows.
-* <strong>Points faibles :</strong> <strong>Coût élevé</strong> (nécessite des licences Windows Server), lourd à mettre en place pour "seulement" 20 postes, incompatible avec notre contrainte de serveur Linux MN08.</p>
+<p>La solution standard de Microsoft pour les entreprises.</p>
+<ul>
+<li>
+<p><strong>Fonctionnalités :</strong> Déploiement natif, injection de pilotes dynamique, personnalisation poussée.</p>
+</li>
+<li>
+<p><strong>Points forts :</strong> Intégration parfaite avec l'Active Directory et Windows.</p>
+</li>
+<li>
+<p><strong>Points faibles :</strong> <strong>Coût élevé</strong> (nécessite des licences Windows Server), lourd à mettre en place pour "seulement" 20 postes, incompatible avec notre contrainte de serveur Linux MN08.</p>
+</li>
+</ul>
 <hr />
 <h2 id="choix-de-la-solution-fog-project">Choix de la Solution : FOG Project</h2>
 <p>Conformément à la décision de la DSI , nous avons retenu <strong>FOG Project</strong>.</p>
-<p><strong>Justification du choix :</strong>
-1.  <strong>Coût :</strong> La solution est gratuite, contrairement aux solutions Microsoft .
-2.  <strong>Infrastructure :</strong> Elle s'installe nativement sur le serveur <strong>MN08</strong> (Linux) mis à disposition .
-3.  <strong>Efficacité :</strong> La gestion du Multicast permet de déployer les 19 postes restants simultanément en un temps record.
-4.  <strong>Gestion :</strong> L'interface Web permet une gestion centralisée des incidents et des tâches, facilitant la maintenance future.</p>
+<p><strong>Justification du choix :</strong></p>
+<ol>
+<li>
+<p><strong>Coût :</strong> La solution est gratuite, contrairement aux solutions Microsoft .</p>
+</li>
+<li>
+<p><strong>Infrastructure :</strong> Elle s'installe nativement sur le serveur <strong>MN08</strong> (Linux) mis à disposition .</p>
+</li>
+<li>
+<p><strong>Efficacité :</strong> La gestion du Multicast permet de déployer les 19 postes restants simultanément en un temps record.</p>
+</li>
+<li>
+<p><strong>Gestion :</strong> L'interface Web permet une gestion centralisée des incidents et des tâches, facilitant la maintenance future.</p>
+</li>
+</ol>
 
 
 

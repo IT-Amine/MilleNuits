@@ -1014,15 +1014,19 @@
 <h2 id="2-pourquoi-est-ce-obligatoire">2. Pourquoi est-ce obligatoire ?</h2>
 <p>Chaque installation de Windows possède un <strong>SID (Security Identifier)</strong> unique. C'est la carte d'identité numérique de la machine sur le réseau.</p>
 <h3 id="le-probleme">Le problème :</h3>
-<p>Si nous clonons notre "Master" tel quel sur 19 autres postes :
-* Les 20 ordinateurs auront le <strong>MÊME SID</strong>.
-* <strong>Conséquences :</strong> Conflits graves dans l'Active Directory, problèmes de mises à jour (WSUS), et instabilité réseau.</p>
+<p>Si nous clonons notre "Master" tel quel sur 19 autres postes :</p>
+<ul>
+<li>Les 20 ordinateurs auront le <strong>MÊME SID</strong>.</li>
+<li><strong>Conséquences :</strong> Conflits graves dans l'Active Directory, problèmes de mises à jour (WSUS), et instabilité réseau.</li>
+</ul>
 <h3 id="la-solution-sysprep">La solution Sysprep :</h3>
-<p>L'action de "Généraliser" va :
-1. Supprimer le SID unique.
-2. Supprimer le nom de l'ordinateur.
-3. Supprimer les pilotes matériels spécifiques (pour forcer une redétection au démarrage).
-4. Remettre le système en mode "OOBE" (Out-Of-Box Experience), c'est-à-dire l'écran de bienvenue comme au premier démarrage.</p>
+<p>L'action de "Généraliser" va :</p>
+<ol>
+<li>Supprimer le SID unique.</li>
+<li>Supprimer le nom de l'ordinateur.</li>
+<li>Supprimer les pilotes matériels spécifiques (pour forcer une redétection au démarrage).</li>
+<li>Remettre le système en mode "OOBE" (Out-Of-Box Experience), c'est-à-dire l'écran de bienvenue comme au premier démarrage.</li>
+</ol>
 <hr />
 <h2 id="3-la-procedure-technique">3. La Procédure Technique</h2>
 <p>Sur notre machine virtuelle "Master-MilleNuits-W11", une fois tous les logiciels installés (Firefox, LibreOffice, VLC...), voici la procédure à suivre <strong>en tout dernier lieu</strong>.</p>

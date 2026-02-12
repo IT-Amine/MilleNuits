@@ -1032,9 +1032,10 @@
 <h2 id="1-prerequis-serveur">1. Prérequis Serveur</h2>
 <p>Avant d'installer FOG, le serveur Linux (Debian 11/12 ou Ubuntu Server) doit être configuré avec une <strong>adresse IP Statique</strong>. FOG ne peut pas fonctionner correctement avec une IP dynamique (DHCP).</p>
 <ul>
-<li><strong>Nom du serveur :</strong> MN08 </li>
-<li><strong>OS :</strong> Linux (Debian/Ubuntu)</li>
-<li><strong>IP Statique :</strong> (À définir selon le plan d'adressage, ex: 192.168.x.250)</li>
+<li><strong>Nom du serveur :</strong> FOG-MN08</li>
+<li><strong>OS :</strong> Linux (Debian 13.2)</li>
+<li><strong>IP Statique :</strong> 172.16.52.10 /24</li>
+<li><strong>Passerelle</strong> : 172.16.52.252 (.254 celui du réseau pédagogique)</li>
 </ul>
 <hr />
 <h2 id="2-installation-de-fog-project">2. Installation de FOG Project</h2>
@@ -1046,10 +1047,8 @@ sudo -i
 apt-get update &amp;&amp; apt-get install git -y
 git clone <a href="https://github.com/FOGProject/fogproject.git">https://github.com/FOGProject/fogproject.git</a> /opt/fogproject</p>
 <pre><code>
-
-
 ### Étape 2.2 : Lancement du script d'installation
-
+&lt;br&gt;
 </code></pre>
 <p>cd /opt/fogproject/bin
 ./installfog.sh

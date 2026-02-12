@@ -16,7 +16,6 @@ Avant d'installer FOG, le serveur Linux (Debian 11/12 ou Ubuntu Server) doit êt
 ---
 
 ## 2. Installation de FOG Project
-
 L'installation s'effectue en ligne de commande via le script officiel.
 
 ### Étape 2.1 : Téléchargement
@@ -26,15 +25,13 @@ Nous utilisons Git pour récupérer la dernière version stable.
 sudo -i
 apt-get update && apt-get install git -y
 git clone [https://github.com/FOGProject/fogproject.git](https://github.com/FOGProject/fogproject.git) /opt/fogproject
-````
+```
 
 ### Étape 2.2 : Lancement du script d'installation
-<br>
-````
+```
 cd /opt/fogproject/bin
 ./installfog.sh
-````
-
+```
 
 ### Étape 2.3 : Réponses aux questions de l'installateur
 
