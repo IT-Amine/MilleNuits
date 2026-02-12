@@ -8,9 +8,10 @@ Cette documentation décrit la procédure technique pour transformer le serveur 
 
 Avant d'installer FOG, le serveur Linux (Debian 11/12 ou Ubuntu Server) doit être configuré avec une **adresse IP Statique**. FOG ne peut pas fonctionner correctement avec une IP dynamique (DHCP).
 
-* **Nom du serveur :** MN08 
-* **OS :** Linux (Debian/Ubuntu)
-* **IP Statique :** (À définir selon le plan d'adressage, ex: 192.168.x.250)
+* **Nom du serveur :** FOG-MN08
+* **OS :** Linux (Debian 13.2)
+* **IP Statique :** 172.16.52.10 /24
+* **Passerelle** : 172.16.52.252 (.254 celui du réseau pédagogique)
 
 ---
 
@@ -27,10 +28,8 @@ apt-get update && apt-get install git -y
 git clone [https://github.com/FOGProject/fogproject.git](https://github.com/FOGProject/fogproject.git) /opt/fogproject
 ````
 
-
-
 ### Étape 2.2 : Lancement du script d'installation
-
+<br>
 ````
 cd /opt/fogproject/bin
 ./installfog.sh

@@ -14,11 +14,13 @@ Chaque installation de Windows possède un **SID (Security Identifier)** unique.
 
 ### Le problème :
 Si nous clonons notre "Master" tel quel sur 19 autres postes :
+
 * Les 20 ordinateurs auront le **MÊME SID**.
 * **Conséquences :** Conflits graves dans l'Active Directory, problèmes de mises à jour (WSUS), et instabilité réseau.
 
 ### La solution Sysprep :
 L'action de "Généraliser" va :
+
 1. Supprimer le SID unique.
 2. Supprimer le nom de l'ordinateur.
 3. Supprimer les pilotes matériels spécifiques (pour forcer une redétection au démarrage).
@@ -31,11 +33,13 @@ L'action de "Généraliser" va :
 Sur notre machine virtuelle "Master-MilleNuits-W11", une fois tous les logiciels installés (Firefox, LibreOffice, VLC...), voici la procédure à suivre **en tout dernier lieu**.
 
 ### Étape 1 : Lancer l'outil
+
 1. Ouvrir l'explorateur de fichiers.
 2. Se rendre dans : `C:\Windows\System32\Sysprep\`
 3. Exécuter le fichier **`sysprep.exe`** en tant qu'administrateur.
 
 ### Étape 2 : Configuration (Crucial)
+
 Une fenêtre s'ouvre. Il faut impérativement choisir les options suivantes :
 
 * **Action de nettoyage du système :**

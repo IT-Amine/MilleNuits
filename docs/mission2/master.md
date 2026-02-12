@@ -7,6 +7,7 @@ Cette section détaille la création de la machine virtuelle de référence qui 
 L'objectif est de préparer un environnement **Windows 11** propre, configuré avec les standards de l'entreprise, afin de pouvoir le cloner ultérieurement sur 19 autres postes.
 
 **Contraintes respectées :**
+
 * Système d'exploitation : **Windows 11 Pro**
 * Compte administrateur local imposé.
 * Suite logicielle standard installée.
@@ -32,13 +33,16 @@ La VM a été paramétrée pour respecter les prérequis matériels stricts de W
 Pour respecter la contrainte d'un **compte local** (et non un compte Microsoft en ligne), une procédure spécifique a été appliquée lors de l'installation (OOBE).
 
 **Procédure appliquée :**
+
 1.  Lancement de l'installation standard de Windows 11.
 2.  À l'écran de connexion réseau, déconnexion physique (ou virtuelle) de la carte réseau.
 3.  Ouverture de l'invite de commande avec `MAJ + F10`.
 4.  Exécution de la commande de contournement :
+
 ```
     OOBE\BYPASSNRO
 ```
+
 5.  Après redémarrage, sélection de l'option **"Je n'ai pas Internet"** pour forcer la création du compte local.
 
 > **Source de la procédure :** Cette méthode est documentée sur la communauté technique Microsoft.

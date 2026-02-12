@@ -33,28 +33,35 @@ Cette documentation s'appuie sur l'environnement technique suivant :
 
 ### [Mission 1 : Documentation](mission1/comparatif.md)
 *Mise en place de l'environnement de documentation collaborative.*
+
 **Outils :** Markdown, MkDocs, GitHub Pages.
+
 **Statut :** ✅ Validé.
 
 ### [Mission 2 : Installation Postes Clients](mission2/master.md)
 *Préparation du master Windows 11 et configuration logicielle.*
+
 **Cible :** Création d'un poste maître avec compte Administrateur local.
+
 **Logiciels :** Firefox, LibreOffice, VLC, Lecteur PDF.
 
 ### [Mission 3 : Déploiement Automatisé](mission3/fog.md)
 *Mise en place d'une solution de clonage pour les 19 autres postes.*
+
 **Solution retenue :** Serveur FOG (Linux).
+
 **Objectif :** Déploiement multicast rapide.
 
 ### [Mission 4 : Gestion d'Incidents (GLPI)](mission4/glpi.md)
 *Professionnalisation du support technique.*
+
 **Problème actuel :** Gestion informelle et perte d'informations.
+
 **Solution :** Mise en place d'un outil de ticketing (GLPI) pour le suivi et les statistiques.
 
 ---
 
 ## Informations Projet
-
 **Date de livraison finale :** 12 Mars 2026
 <br>
 **Équipe :** 2 Étudiants (Amine & Lucka)
