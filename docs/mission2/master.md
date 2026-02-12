@@ -21,6 +21,7 @@ La VM a été paramétrée pour respecter les prérequis matériels stricts de W
 | Paramètre              | Valeur Configurée                                      |
 | :--------------------- | :----------------------------------------------------- |
 | **Nom de la VM**       | `Master-MilleNuits-W11`                                |
+| **Nom de l'appareil**  | MilleNuitMaster                                        |
 | **Mémoire Vive (RAM)** | 4096 Mo (4 Go) ou 8096 Mo (8Go)                        |
 | **Processeur (vCPU)**  | 2 Cœurs                                                |
 | **Module TPM**         | Activé (Version 2.0)                                   |

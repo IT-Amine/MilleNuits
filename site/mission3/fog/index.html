@@ -648,6 +648,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#etape-22-lancement-du-script-dinstallation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 2.2 : Lancement du script d'installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#etape-23-reponses-aux-questions-de-linstallateur" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -922,6 +933,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#etape-22-lancement-du-script-dinstallation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 2.2 : Lancement du script d'installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#etape-23-reponses-aux-questions-de-linstallateur" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1042,17 +1064,14 @@
 <p>L'installation s'effectue en ligne de commande via le script officiel.</p>
 <h3 id="etape-21-telechargement">Étape 2.1 : Téléchargement</h3>
 <p>Nous utilisons Git pour récupérer la dernière version stable.</p>
-<p>```
-sudo -i
+<pre><code>sudo -i
 apt-get update &amp;&amp; apt-get install git -y
-git clone <a href="https://github.com/FOGProject/fogproject.git">https://github.com/FOGProject/fogproject.git</a> /opt/fogproject</p>
-<pre><code>
-### Étape 2.2 : Lancement du script d'installation
-&lt;br&gt;
+git clone [https://github.com/FOGProject/fogproject.git](https://github.com/FOGProject/fogproject.git) /opt/fogproject
 </code></pre>
-<p>cd /opt/fogproject/bin
+<h3 id="etape-22-lancement-du-script-dinstallation">Étape 2.2 : Lancement du script d'installation</h3>
+<pre><code>cd /opt/fogproject/bin
 ./installfog.sh
-````</p>
+</code></pre>
 <h3 id="etape-23-reponses-aux-questions-de-linstallateur">Étape 2.3 : Réponses aux questions de l'installateur</h3>
 <p>Durant l'installation, voici les choix effectués pour l'environnement Mille Nuits :</p>
 <ol>
