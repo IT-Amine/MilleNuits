@@ -1,4 +1,4 @@
-# 📘 Procédures de Gestion d'Incidents
+# Procédures de Gestion d'Incidents
 
 Ce guide explique comment utiliser GLPI pour le support informatique de **Mille Nuits**, couvrant le cycle de vie complet d'un ticket.
 

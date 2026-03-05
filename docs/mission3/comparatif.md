@@ -1,4 +1,4 @@
-# ⚖️ Comparatif des Solutions de Déploiement
+# Comparatif des Solutions de Déploiement
 
 ## Objectif de l'étude
 Dans le cadre du renouvellement du parc informatique de **Mille Nuits**, nous devons déployer une image Windows 11 standardisée sur 20 postes clients .
@@ -10,15 +10,14 @@ Pour éviter une installation manuelle fastidieuse, nous avons comparé trois so
 
 Nous avons analysé **FOG Project**, **Clonezilla Server** et **Microsoft WDS/MDT**.
 
-| Critères | **FOG Project** (Retenu) | **Clonezilla Server** (Alternative) | **Microsoft WDS / MDT** |
-| :--- | :--- | :--- | :--- |
-| **Type** | Open Source (Libre) | Open Source (Libre) | Propriétaire |
-| **Coût** | **Gratuit** | **Gratuit** | Payant (Licences Windows Server + CALs) |
-| **OS Serveur** | Linux (Debian, Ubuntu...) | Linux (DRBL) | Windows Server uniquement |
-| **Interface de gestion** | **Interface Web complète** | Ligne de commande / Texte | Console MMC (Complexe) |
-| **Mode de déploiement** | Unicast & **Multicast** | Unicast & Multicast | Unicast & Multicast |
-| **Gestion de parc** | Oui (Inventaire, Snapins) | Non (Clonage pur) | Oui (Très complet) |
-| **Facilité d'usage** | ⭐⭐⭐ (Centralisé Web) | ⭐⭐ (Austère) | ⭐ (Expertise requise) |
+| Critères                 | **FOG Project** (Retenu)   | **Clonezilla Server** (Alternative) | **Microsoft WDS / MDT**                 |
+| :----------------------- | :------------------------- | :---------------------------------- | :-------------------------------------- |
+| **Type**                 | Open Source (Libre)        | Open Source (Libre)                 | Propriétaire                            |
+| **Coût**                 | **Gratuit**                | **Gratuit**                         | Payant (Licences Windows Server + CALs) |
+| **OS Serveur**           | Linux (Debian, Ubuntu...)  | Linux (DRBL)                        | Windows Server uniquement               |
+| **Interface de gestion** | **Interface Web complète** | Ligne de commande / Texte           | Console MMC (Complexe)                  |
+| **Mode de déploiement**  | Unicast & **Multicast**    | Unicast & Multicast                 | Unicast & Multicast                     |
+| **Gestion de parc**      | Oui (Inventaire, Snapins)  | Non (Clonage pur)                   | Oui (Très complet)                      |
 
 ---
 

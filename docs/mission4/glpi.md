@@ -1,4 +1,4 @@
-# 🛠️ Installation de GLPI (Service Desk)
+# Installation de GLPI (Service Desk)
 
 **Serveur :** MN06
 **OS :** Debian 12 (Bookworm)
@@ -116,7 +116,7 @@ sudo systemctl reload apache2
 
 1. Ouvrir le navigateur sur le poste Administrateur.
     
-2. Accéder à l'URL : `http://172.16.52.20` (IP du serveur MN06).
+2. Accéder à l'URL : `http://172.16.52.20` (IP du serveur GLPI-MN08).
     
 3. Suivre l'assistant d'installation.
     
@@ -130,4 +130,6 @@ sudo systemctl reload apache2
 |**Mot de passe**|`M1lleNuits_Secret!2026`|
 
 
-!!! warning "⚠️ Sécurité Post-Installation" Une fois l'installation terminée, il est impératif de supprimer le fichier d'installation pour empêcher une réinitialisation malveillante : `sudo rm /var/www/html/glpi/install/install.php` 
+!!! warning "⚠️ Sécurité Post-Installation" 
+Une fois l'installation terminée, il est impératif de supprimer le fichier d'installation pour empêcher une réinitialisation malveillante : 
+`sudo rm /var/www/html/glpi/install/install.php` 

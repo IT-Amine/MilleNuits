@@ -1,4 +1,4 @@
-# ☁️ Installation et Configuration de FOG (Serveur MN08)
+# Installation et Configuration de FOG (Serveur MN08)
 
 Cette documentation décrit la procédure technique pour transformer le serveur **MN08** en serveur de déploiement FOG Project, conformément aux besoins de l'infrastructure **Mille Nuits**.
 
@@ -45,7 +45,7 @@ Durant l'installation, voici les choix effectués pour l'environnement Mille Nui
     
 4. **Setup DHCP Router Address :** `Yes` (Indiquer l'IP du routeur Cisco 1921 )
     
-5. **Setup DNS Address :** `Yes` (Indiquer le DNS de l'entreprise ou 8.8.8.8)
+5. **Setup DNS Address :** `Yes` (Indiquer le DNS : 8.8.8.8 ou 1.1.1.1)
     
 6. **Would you like to use the FOG server for DHCP Service?**
     
