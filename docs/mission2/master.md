@@ -1,3 +1,5 @@
+
+
 # Mission 2 : Création du Poste Maître (Master)
 
 Cette section détaille la création de la machine virtuelle de référence qui servira de base au déploiement sur l'ensemble du parc informatique de **Mille Nuits**.

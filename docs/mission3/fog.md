@@ -1,3 +1,5 @@
+
+
 # Installation et Configuration de FOG (Serveur MN08)
 
 Cette documentation décrit la procédure technique pour transformer le serveur **MN08** en serveur de déploiement FOG Project, conformément aux besoins de l'infrastructure **Mille Nuits**.

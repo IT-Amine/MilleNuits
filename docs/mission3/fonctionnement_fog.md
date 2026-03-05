@@ -1,3 +1,5 @@
+
+
 # Fonctionnement de FOG & Interaction Sysprep
 
 ## 1. Qu'est-ce que FOG Project ?

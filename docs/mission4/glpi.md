@@ -1,7 +1,7 @@
 # Installation de GLPI (Service Desk)
 
-**Serveur :** MN06
-**OS :** Debian 12 (Bookworm)
+**Serveur :** MN09
+**OS :** Debian 12
 **Rôle :** Gestionnaire de Parc et Incidents
 
 ---
@@ -37,7 +37,10 @@ sudo systemctl restart apache2
 
 Nous créons une base dédiée à l'environnement **Mille Nuits**.
 
-!!! note "🔐 Identifiants Database" * **Base :** `db_millenuits_glpi` * **Utilisateur :** `admin_millenuits` * **Mot de passe :**`M1lleNuits_Secret!2026`
+> note "🔐 Identifiants Database" 
+>  **Base :** `db_millenuits_glpi` 
+>  **Utilisateur :** `admin_millenuits` 
+> **Mot de passe :**`M1lleNuits_Secret!2026`
 
 **Procédure SQL :**
 
@@ -116,7 +119,7 @@ sudo systemctl reload apache2
 
 1. Ouvrir le navigateur sur le poste Administrateur.
     
-2. Accéder à l'URL : `http://172.16.52.20` (IP du serveur GLPI-MN08).
+2. Accéder à l'URL : `http://172.16.52.20` (IP du serveur GLPI-MN09).
     
 3. Suivre l'assistant d'installation.
     
