@@ -11,7 +11,7 @@ Cette documentation décrit la procédure technique pour transformer le serveur 
 Avant d'installer FOG, le serveur Linux (Debian 11/12 ou Ubuntu Server) doit être configuré avec une **adresse IP Statique**. FOG ne peut pas fonctionner correctement avec une IP dynamique (DHCP).
 
 * **Nom du serveur :** FOG-MN08
-* **OS :** Linux (Debian 13.2)
+* **OS :** Linux (Debian 13)
 * **IP Statique :** 172.16.52.10 /24
 * **Passerelle** : 172.16.52.252 (.254 celui du réseau pédagogique)
 
@@ -113,7 +113,7 @@ Pour répondre à la mission de déploiement des 20 postes , voici la procédure
 
 Pour déployer sur les 19 autres postes simultanément :
 
-1. Enregistrer les 19 postes (ou utiliser "Deploy All" si le réseau est isolé).
+1. Enregistrer le Master.
     
 2. Créer un **Groupe** contenant tous les postes cibles.
     
@@ -121,7 +121,7 @@ Pour déployer sur les 19 autres postes simultanément :
     
 4. Démarrer tous les postes en PXE.
     
-5. FOG écrit l'image sur les 19 disques en même temps.
+5. FOG écrit l'image sur les postes cibles en même temps.
     
 
 ---

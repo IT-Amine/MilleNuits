@@ -1,6 +1,6 @@
 # Installation de GLPI (Service Desk)
 
-**Serveur :** MN09
+**Serveur :** MN06
 **OS :** Debian 12
 **Rôle :** Gestionnaire de Parc et Incidents
 
@@ -119,7 +119,7 @@ sudo systemctl reload apache2
 
 1. Ouvrir le navigateur sur le poste Administrateur.
     
-2. Accéder à l'URL : `http://172.16.52.20` (IP du serveur GLPI-MN09).
+2. Accéder à l'URL : `http://172.16.52.20` (IP du serveur GLPI-MN06).
     
 3. Suivre l'assistant d'installation.
     
