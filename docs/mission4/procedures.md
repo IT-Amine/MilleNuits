@@ -93,6 +93,7 @@ Le service informatique reçoit la demande.
 ## 4. Statistiques
 
 Le DSI peut consulter les statistiques globales dans le menu **Accueil > Tableau de bord** :
+
 * Nombre de tickets ouverts ce mois-ci.
 
 * Temps moyen de résolution.
