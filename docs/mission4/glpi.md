@@ -41,7 +41,9 @@ tr:nth-child(even) { background-color: #f9fafb; }
 # Installation de GLPI (Service Desk)
 
 **Serveur :** MN06
+
 **OS :** Debian 12
+
 **Rôle :** Gestionnaire de Parc et Incidents
 
 ---
@@ -78,8 +80,11 @@ sudo systemctl restart apache2
 Nous créons une base dédiée à l'environnement **Mille Nuits**.
 
 > note "🔐 Identifiants Database" 
+> 
 >  **Base :** `db_millenuits_glpi` 
+>  
 >  **Utilisateur :** `admin_millenuits` 
+>  
 > **Mot de passe :**`M1lleNuits_Secret!2026`
 
 **Procédure SQL :**
@@ -175,5 +180,6 @@ sudo systemctl reload apache2
 <div class="calc-box">
 ⚠️ <strong>Sécurité Post-Installation </strong><br>
 Une fois l'installation terminée, il est impératif de supprimer le fichier d'installation pour empêcher une réinitialisation malveillante : 
+
 `sudo rm /var/www/html/glpi/install/install.php`
 </div>
