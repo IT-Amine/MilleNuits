@@ -108,9 +108,9 @@ Une fois le script terminé en console, il demande de se rendre sur une page Web
     
 3. Se connecter avec les identifiants par défaut :
     
-    - **User :** `fog`
+    - **User :** `admin.sys`
         
-    - **Password :** `password`
+    - **Password :** `@dmin26!`
         
 
 > **Sécurité :** La première action réalisée a été de changer le mot de passe par défaut dans _User Management_.
