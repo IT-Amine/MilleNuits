@@ -25,3 +25,4 @@ nav:
   - Mission 4 - Incidents:
       - Outil GLPI: mission4/glpi.md
       - Procédures: mission4/procedures.md
+      - Users: mission4/users.md
