@@ -58,7 +58,7 @@ L'utilisateur rencontre un problème (ex: "Pas de connexion internet" ou "Souris
     * **Description :** Détail du problème.
 4. Valider. Le ticket passe au statut **"Nouveau"**.
 
-![[ticket.png]]
+
 
 ---
 
@@ -71,7 +71,6 @@ Le service informatique reçoit la demande.
 2. Il ouvre le ticket et change le statut en **"En cours (Attribué)"**.
 3. Il s'assigne le ticket (bouton "S'attribuer").
 
-![[tech1.png]]
 
 ### Étape B : Résolution et Documentation
 1. Le technicien intervient (à distance ou sur place).
@@ -84,7 +83,7 @@ Le service informatique reçoit la demande.
 2. Il valide la solution (ou le ticket se clôture automatiquement après 24h).
 3. Statut final : **"Clos"**.
 
-![[tech2.png]]
+
 
 ---
 ## 4. Statistiques
