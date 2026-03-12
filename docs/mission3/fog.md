@@ -159,7 +159,6 @@ Pour répondre à la mission de déploiement des 20 postes , voici la procédure
 4. Redémarrer le Master en PXE : FOG capture le disque et l'envoie sur le serveur MN08.
     
 
-![[fog.png]]
 
 ---
 
