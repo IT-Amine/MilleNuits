@@ -38,6 +38,8 @@ tr:nth-child(even) { background-color: #f9fafb; }
 .status-ok { color: #166534; font-weight: bold; background-color: #dcfce7; padding: 5px 10px; border-radius: 15px; }
 </style>
 
+
+
 # Fonctionnement de FOG & Interaction Sysprep
 
 ## 1. Qu'est-ce que FOG Project ?

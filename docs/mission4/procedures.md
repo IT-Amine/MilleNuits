@@ -44,16 +44,7 @@ Ce guide explique comment utiliser GLPI pour le support informatique de **Mille 
 
 ---
 
-## 1. Création des Utilisateurs
-Pour que les salariés d'Angers et Joué-les-Tours puissent déclarer des incidents, des comptes ont été créés.
-
-* **Profil "u.ventes" (Utilisateur standard) :** Peut uniquement créer des tickets et voir ses propres demandes.
-* **Profil "tech.support" (Service Info) :** Peut voir, s'attribuer et résoudre les tickets.
-* **Profil "admin.sys" :** Configuration complète.
-
----
-
-## 2. Déclarer un incident (Vue Salarié)
+## 1.Déclarer un incident
 
 L'utilisateur rencontre un problème (ex: "Pas de connexion internet" ou "Souris HS").
 
