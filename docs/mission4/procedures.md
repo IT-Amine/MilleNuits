@@ -57,7 +57,7 @@ Pour que les salariés d'Angers et Joué-les-Tours puissent déclarer des incide
 
 L'utilisateur rencontre un problème (ex: "Pas de connexion internet" ou "Souris HS").
 
-1. Se connecter à GLPI (`glpi.millenuits.lan`).
+1. Se connecter à GLPI.
 2. Cliquer sur **"Créer un ticket"**.
 3. Remplir les champs :
     * **Type :** Incident.
