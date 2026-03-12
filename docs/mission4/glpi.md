@@ -172,7 +172,8 @@ sudo systemctl reload apache2
 |**Utilisateur**|`admin_millenuits`|
 |**Mot de passe**|`M1lleNuits_Secret!2026`|
 
-
-!!! warning "⚠️ Sécurité Post-Installation" 
+<div class="calc-box">
+⚠️ <strong>Sécurité Post-Installation </strong><br>
 Une fois l'installation terminée, il est impératif de supprimer le fichier d'installation pour empêcher une réinitialisation malveillante : 
-`sudo rm /var/www/html/glpi/install/install.php` 
+`sudo rm /var/www/html/glpi/install/install.php`
+</div>
