@@ -46,12 +46,12 @@ Ce document détaille la stratégie de gestion des accès et la procédure de cr
 
 Afin de sécuriser l'accès aux données et de simplifier l'interface pour les utilisateurs finaux, les comptes sont répartis selon les profils natifs de GLPI.
 
-| Type d'Utilisateur       | Identifiant (Exemple) | Profil GLPI      | Droits et Permissions Accordés                                                                                                |
-| :----------------------- | :-------------------- | :--------------- | :---------------------------------------------------------------------------------------------------------------------------- |
-| **Administrateur**       | `admin.sys`           | **Super-Admin**  | Accès total. Configuration du système, gestion des règles, création des utilisateurs et habilitations.                        |
-| **Chef Informatique**    | `manager.it`          | **Supervisor**   | Gestion globale du parc et du support. Peut assigner les tickets aux techniciens et consulter les statistiques.               |
-| **Support (Technicien)** | `tech.support`        | **Technician**   | Gestion de l'inventaire matériel et traitement/résolution des tickets d'incidents. Ne peut pas modifier la structure de GLPI. |
-| **Employé (Client)**     | `u.ventes`            | **Self-Service** | Accès restreint au portail simplifié. Permet uniquement de créer un ticket d'assistance et de suivre ses propres demandes.    |
+| Type d'Utilisateur       | Identifiant (Exemple) | Password        | Profil GLPI      | Droits et Permissions Accordés                                                                                                |
+| :----------------------- | :-------------------- | --------------- | :--------------- | :---------------------------------------------------------------------------------------------------------------------------- |
+| **Administrateur**       | `admin.sys`           | `@dmin26!`      | **Super-Admin**  | Accès total. Configuration du système, gestion des règles, création des utilisateurs et habilitations.                        |
+| **Chef Informatique**    | `manager.it`          | `m@nager26!`    | **Supervisor**   | Gestion globale du parc et du support. Peut assigner les tickets aux techniciens et consulter les statistiques.               |
+| **Support (Technicien)** | `tech.support`        | `supp0rt26!`    | **Technician**   | Gestion de l'inventaire matériel et traitement/résolution des tickets d'incidents. Ne peut pas modifier la structure de GLPI. |
+| **Employé (Client)**     | `u.ventes`            | `millenuits26!` | **Self-Service** | Accès restreint au portail simplifié. Permet uniquement de créer un ticket d'assistance et de suivre ses propres demandes.    |
 
 ## 2. PROCÉDURE DE CRÉATION D'UN COMPTE
 
