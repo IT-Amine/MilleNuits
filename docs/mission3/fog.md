@@ -38,18 +38,6 @@ tr:nth-child(even) { background-color: #f9fafb; }
 .status-ok { color: #166534; font-weight: bold; background-color: #dcfce7; padding: 5px 10px; border-radius: 15px; }
 </style>
 
-<div class="header-container">
-    <div class="logo">
-        <img src="MilleNuits.jpg" alt="Logo Mille Nuits">
-    </div>
-    <div class="info-box">
-        <strong>PROJET MILLE NUITS</strong><br>
-        Mission 3 : Installation & Configuration<br>
-        Date : 12/03/2026<br>
-        Auteur : <em>KADA Amine</em>
-    </div>
-</div>
-
 # Installation et Configuration de FOG (Serveur MN08)
 
 Cette documentation décrit la procédure technique pour transformer le serveur **MN08** en serveur de déploiement FOG Project, conformément aux besoins de l'infrastructure **Mille Nuits**.
@@ -159,6 +147,7 @@ Pour répondre à la mission de déploiement des 20 postes , voici la procédure
 4. Redémarrer le Master en PXE : FOG capture le disque et l'envoie sur le serveur MN08.
     
 
+![[MkDocs-MilleNuits/docs/assets/fog.png]]
 
 ---
 
