@@ -1,4 +1,42 @@
-<style> :root { --couleur-lycee: #1e3a8a; /* Bleu */ --couleur-titre: #d97706; /* Orange */ --gris-clair: #f3f4f6; } h1 { color: var(--couleur-lycee); border-bottom: 2px solid var(--couleur-titre); padding-bottom: 10px; } h2 { color: var(--couleur-lycee); margin-top: 30px; border-bottom: 1px solid #e5e7eb; padding-bottom: 5px; } h3 { color: #333; border-left: 4px solid var(--couleur-titre); padding-left: 10px; margin-top: 25px; } /* En-tête */ .header-container { display: flex; align-items: center; justify-content: space-between; margin-bottom: 40px; border-bottom: 1px solid #ddd; padding-bottom: 20px; } .logo img { width: 250px; height: auto; } .info-box { text-align: right; color: #555; font-size: 1em; line-height: 1.4; } /* Tableaux */ table { width: 100%; border-collapse: collapse; margin: 20px 0; border-radius: 5px; overflow: hidden; box-shadow: 0 0 10px rgba(0,0,0,0.05); } th { background-color: var(--couleur-lycee); color: white; padding: 12px; text-transform: uppercase; font-size: 0.9em; } td { border: 1px solid #e5e7eb; padding: 10px; text-align: center; } td:first-child { text-align: left; font-weight: bold; color: var(--couleur-lycee); } tr:nth-child(even) { background-color: #f9fafb; } /* Boites */ .calc-box { background-color: var(--gris-clair); border-left: 4px solid var(--couleur-titre); padding: 15px; margin-bottom: 20px; border-radius: 0 5px 5px 0; } .status-ok { color: #166534; font-weight: bold; background-color: #dcfce7; padding: 5px 10px; border-radius: 15px; } </style>
+<style>
+:root {
+    --couleur-lycee: #1e3a8a; /* Bleu */
+    --couleur-titre: #d97706; /* Orange */
+    --gris-clair: #f3f4f6;
+}
+
+h1 { color: var(--couleur-lycee); border-bottom: 2px solid var(--couleur-titre); padding-bottom: 10px; }
+h2 { color: var(--couleur-lycee); margin-top: 30px; border-bottom: 1px solid #e5e7eb; padding-bottom: 5px; }
+h3 { color: #333; border-left: 4px solid var(--couleur-titre); padding-left: 10px; margin-top: 25px; }
+
+/* En-tête */
+.header-container { 
+    display: flex; align-items: center; justify-content: space-between; 
+    margin-bottom: 40px; border-bottom: 1px solid #ddd; padding-bottom: 20px;
+}
+.logo img { 
+    width: 250px; 
+    height: auto; 
+}
+.info-box { text-align: right; color: #555; font-size: 1em; line-height: 1.4; }
+
+/* Tableaux */
+table { width: 100%; border-collapse: collapse; margin: 20px 0; border-radius: 5px; overflow: hidden; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+th { background-color: var(--couleur-lycee); color: white; padding: 12px; text-transform: uppercase; font-size: 0.9em; }
+td { border: 1px solid #e5e7eb; padding: 10px; text-align: center; }
+td:first-child { text-align: left; font-weight: bold; color: var(--couleur-lycee); }
+tr:nth-child(even) { background-color: #f9fafb; }
+
+/* Boites */
+.calc-box { 
+    background-color: var(--gris-clair); 
+    border-left: 4px solid var(--couleur-titre); 
+    padding: 15px; 
+    margin-bottom: 20px; 
+    border-radius: 0 5px 5px 0;
+}
+.status-ok { color: #166534; font-weight: bold; background-color: #dcfce7; padding: 5px 10px; border-radius: 15px; }
+</style>
 
 # DOCUMENTATION : GESTION DES UTILISATEURS GLPI
 
@@ -8,12 +46,12 @@ Ce document détaille la stratégie de gestion des accès et la procédure de cr
 
 Afin de sécuriser l'accès aux données et de simplifier l'interface pour les utilisateurs finaux, les comptes sont répartis selon les profils natifs de GLPI.
 
-| Type d'Utilisateur | Identifiant (Exemple) | Profil GLPI | Droits et Permissions Accordés |
-| :--- | :--- | :--- | :--- |
-| **Administrateur** | `admin.sys` | **Super-Admin** | Accès total. Configuration du système, gestion des règles, création des utilisateurs et habilitations. |
-| **Chef Informatique** | `manager.it` | **Supervisor** | Gestion globale du parc et du support. Peut assigner les tickets aux techniciens et consulter les statistiques. |
-| **Support (Technicien)** | `tech.support` | **Technician** | Gestion de l'inventaire matériel et traitement/résolution des tickets d'incidents. Ne peut pas modifier la structure de GLPI. |
-| **Employé (Client)** | `u.ventes` | **Self-Service** | Accès restreint au portail simplifié. Permet uniquement de créer un ticket d'assistance et de suivre ses propres demandes. |
+| Type d'Utilisateur       | Identifiant (Exemple) | Profil GLPI      | Droits et Permissions Accordés                                                                                                |
+| :----------------------- | :-------------------- | :--------------- | :---------------------------------------------------------------------------------------------------------------------------- |
+| **Administrateur**       | `admin.sys`           | **Super-Admin**  | Accès total. Configuration du système, gestion des règles, création des utilisateurs et habilitations.                        |
+| **Chef Informatique**    | `manager.it`          | **Supervisor**   | Gestion globale du parc et du support. Peut assigner les tickets aux techniciens et consulter les statistiques.               |
+| **Support (Technicien)** | `tech.support`        | **Technician**   | Gestion de l'inventaire matériel et traitement/résolution des tickets d'incidents. Ne peut pas modifier la structure de GLPI. |
+| **Employé (Client)**     | `u.ventes`            | **Self-Service** | Accès restreint au portail simplifié. Permet uniquement de créer un ticket d'assistance et de suivre ses propres demandes.    |
 
 ## 2. PROCÉDURE DE CRÉATION D'UN COMPTE
 
@@ -45,9 +83,9 @@ Par défaut, GLPI peut attribuer automatiquement le profil "Self-Service" lors d
 
 Tests effectués pour s'assurer de l'étanchéité des droits entre les différents profils configurés.
 
-| ID Test     | Action Réalisée                                           | Résultat Attendu                                                           |                Statut                 |
-| :---------- | :-------------------------------------------------------- | :------------------------------------------------------------------------- | :-----------------------------------: |
-| **GLPI-01** | Connexion avec le compte **Employé** (`u.ventes`)         | Interface simplifiée affichée. Menu "Administration" et "Parc" invisibles. | <span class="status-ok">VALIDÉ</span> |
-| **GLPI-02** | Création d'un ticket par l'**Employé**                    | Le ticket est bien enregistré et visible dans ses demandes en cours.       | <span class="status-ok">VALIDÉ</span> |
-| **GLPI-03** | Connexion avec le compte **Technicien** (`tech.support`)  | Accès au parc matériel et à la file d'attente des tickets.                 | <span class="status-ok">VALIDÉ</span> |
-| **GLPI-04** | Tentative de création d'utilisateur par le **Technicien** | Option indisponible (droits insuffisants).                                 | <span class="status-ok">VALIDÉ</span> |
+| ID Test | Action Réalisée | Résultat Attendu | Statut |
+| :--- | :--- | :--- | :---: |
+| **GLPI-01** | Connexion avec le compte **Employé** (`u.ventes`) | Interface simplifiée affichée. Menu "Administration" et "Parc" invisibles. | <span class="status-ok">VALIDÉ</span> |
+| **GLPI-02** | Création d'un ticket par l'**Employé** | Le ticket est bien enregistré et visible dans ses demandes en cours. | <span class="status-ok">VALIDÉ</span> |
+| **GLPI-03** | Connexion avec le compte **Technicien** (`tech.support`) | Accès au parc matériel et à la file d'attente des tickets. | <span class="status-ok">VALIDÉ</span> |
+| **GLPI-04** | Tentative de création d'utilisateur par le **Technicien** | Option indisponible (droits insuffisants). | <span class="status-ok">VALIDÉ</span> |
