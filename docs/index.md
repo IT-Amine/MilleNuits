@@ -17,6 +17,7 @@ Le service administratif de **Mille Nuits** a initié une refonte de son parc in
 > * Fiabiliser la gestion des incidents et le support utilisateur avec un outil de ticketing (GLPI).
 
 **Missions de la SP2 :**
+
 * [Mission 1 : Documentation](SP2-MilleNuits/mission1/comparatif.md) (Mise en place de cet environnement MkDocs)
 
 * [Mission 2 : Installation Postes Clients](SP2-MilleNuits/mission2/master.md) (Préparation du master Windows 11)
@@ -37,6 +38,7 @@ L'entreprise Mille Nuits ne disposait pas de politique de sécurisation ni de ge
 > * Intégrer une solution de stockage centralisée (NAS) avec redirection de dossiers liée à l'AD.
 
 **Missions de la SP3 :**
+
 * **Mission 1 : Active Directory & DNS** (Serveur MN01 sous Windows Server 2019)
 
 * **[Mission 2 : Serveur DHCP Linux](SP3-MilleNuits/mission2/cisco.md)** (Serveur MN11 sous Linux et relais DHCP Cisco)
