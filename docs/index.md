@@ -36,7 +36,7 @@ Cette documentation s'appuie sur l'environnement technique suivant :
 
 **Outils :** Markdown, MkDocs, GitHub Pages.
 
-**Statut :** ✅ Validé.
+**Statut :** Validé.
 
 ### [Mission 2 : Installation Postes Clients](mission2/master.md)
 *Préparation du master Windows 11 et configuration logicielle.*
