@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Amine">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Installation MkDocs - MilleNuits</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../stylesheets/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">MilleNuits</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">SP2 - Mille Nuits</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mission 1 - Documentation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../comparatif/" class="dropdown-item">Comparatif Editeurs</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Installation MkDocs</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mission 2 - Postes Clients</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../mission2/master/" class="dropdown-item">Masterisation</a>
+</li>
+            
+<li>
+    <a href="../../mission2/sysprep/" class="dropdown-item">Explication Sysprep</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mission 3 - Déploiement</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../mission3/comparatif/" class="dropdown-item">Comparatif Solutions</a>
+</li>
+            
+<li>
+    <a href="../../mission3/fonctionnement_fog/" class="dropdown-item">Fonctionnement FOG</a>
+</li>
+            
+<li>
+    <a href="../../mission3/fog/" class="dropdown-item">Solution FOG</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mission 4 - Incidents</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../mission4/glpi/" class="dropdown-item">Outil GLPI</a>
+</li>
+            
+<li>
+    <a href="../../mission4/procedures/" class="dropdown-item">Procédures</a>
+</li>
+            
+<li>
+    <a href="../../mission4/users/" class="dropdown-item">Users</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">SP3 - Mille Nuits</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mission 2 - Réseau</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../SP3-MilleNuits/mission2/cisco/" class="dropdown-item">Simulation Cisco Packet Tracer</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../comparatif/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../mission2/master/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#installation-de-lenvironnement-de-documentation" class="nav-link">Installation de l'Environnement de Documentation</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#1-prerequis-techniques" class="nav-link">1. Prérequis Techniques</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-installation-de-mkdocs" class="nav-link">2. Installation de MkDocs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#doit-afficher-mkdocs-version-1xx" class="nav-link">Doit afficher : mkdocs, version 1.x.x</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<style>
+:root {
+    --couleur-lycee: #1e3a8a; /* Bleu */
+    --couleur-titre: #d97706; /* Orange */
+    --gris-clair: #f3f4f6;
+}
+
+h1 { color: var(--couleur-lycee); border-bottom: 2px solid var(--couleur-titre); padding-bottom: 10px; }
+h2 { color: var(--couleur-lycee); margin-top: 30px; border-bottom: 1px solid #e5e7eb; padding-bottom: 5px; }
+h3 { color: #333; border-left: 4px solid var(--couleur-titre); padding-left: 10px; margin-top: 25px; }
+
+/* En-tête */
+.header-container { 
+    display: flex; align-items: center; justify-content: space-between; 
+    margin-bottom: 40px; border-bottom: 1px solid #ddd; padding-bottom: 20px;
+}
+.logo img { 
+    width: 250px; 
+    height: auto; 
+}
+.info-box { text-align: right; color: #555; font-size: 1em; line-height: 1.4; }
+
+/* Tableaux */
+table { width: 100%; border-collapse: collapse; margin: 20px 0; border-radius: 5px; overflow: hidden; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+th { background-color: var(--couleur-lycee); color: white; padding: 12px; text-transform: uppercase; font-size: 0.9em; }
+td { border: 1px solid #e5e7eb; padding: 10px; text-align: center; }
+td:first-child { text-align: left; font-weight: bold; color: var(--couleur-lycee); }
+tr:nth-child(even) { background-color: #f9fafb; }
+
+/* Boites */
+.calc-box { 
+    background-color: var(--gris-clair); 
+    border-left: 4px solid var(--couleur-titre); 
+    padding: 15px; 
+    margin-bottom: 20px; 
+    border-radius: 0 5px 5px 0;
+}
+.status-ok { color: #166534; font-weight: bold; background-color: #dcfce7; padding: 5px 10px; border-radius: 15px; }
+</style>
+
+<h1 id="installation-de-lenvironnement-de-documentation">Installation de l'Environnement de Documentation</h1>
+<p>Ce guide détaille la procédure complète pour installer et configurer l'environnement de travail technique du projet <strong>Mille Nuits</strong>.</p>
+<h2 id="1-prerequis-techniques">1. Prérequis Techniques</h2>
+<p>Assurez-vous que les logiciels suivants sont installés sur votre poste de travail :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Outil</th>
+<th style="text-align: left;">Rôle</th>
+<th style="text-align: left;">Vérification (Terminal)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Python</strong> (v3.x)</td>
+<td style="text-align: left;">Langage nécessaire pour MkDocs</td>
+<td style="text-align: left;"><code>python --version</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>PIP</strong></td>
+<td style="text-align: left;">Gestionnaire de paquets Python</td>
+<td style="text-align: left;"><code>pip --version</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Git</strong></td>
+<td style="text-align: left;">Gestionnaire de versions</td>
+<td style="text-align: left;"><code>git --version</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>VS Code</strong></td>
+<td style="text-align: left;">Éditeur de texte recommandé</td>
+<td style="text-align: left;"><code>Aucune</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-installation-de-mkdocs">2. Installation de MkDocs</h2>
+<p>L'installation se réalise via le terminal.</p>
+<h3 id="etape-1-installation-du-moteur">Étape 1 : Installation du moteur</h3>
+<p>Exécutez la commande suivante pour télécharger MkDocs et ses dépendances :</p>
+<pre><code>pip install mkdocs
+</code></pre>
+<p>Étape 2 : Installation du thème (Optionnel)
+Pour obtenir un rendu visuel professionnel (comme le thème ReadTheDocs ou Material), installez le paquet supplémentaire :</p>
+<pre><code>pip install mkdocs-material
+</code></pre>
+<p>Étape 3 : Validation
+Vérifiez que l'installation s'est bien passée :</p>
+<pre><code>mkdocs --version
+</code></pre>
+<h1 id="doit-afficher-mkdocs-version-1xx">Doit afficher : mkdocs, version 1.x.x</h1>
+<ol>
+<li>Création et Configuration du Projet
+Étape 1 : Initialisation
+Placez-vous dans le dossier de votre projet et lancez :</li>
+</ol>
+<pre><code>mkdocs new .    # Cette commande crée le fichier mkdocs.yml (configuration) et le dossier docs/ (contenu).
+</code></pre>
+<p>Étape 2 : Configuration
+Modifiez le fichier mkdocs.yml pour définir le nom du site et la navigation (voir le fichier de configuration fourni dans la documentation principale).</p>
+<ol>
+<li>Utilisation Quotidienne
+Pour rédiger la documentation, nous utilisons un serveur local qui permet de voir le résultat en direct.</li>
+</ol>
+<p>Commande de lancement :</p>
+<pre><code>mkdocs serve    # Accès au site : Ouvrez votre navigateur à l'adresse : http://127.0.0.1:8000
+</code></pre>
+<p>(Note : Le site se met à jour automatiquement à chaque sauvegarde d'un fichier .md).</p>
+<ol>
+<li>Publication en Ligne (GitHub Pages)
+L'hébergement est assuré gratuitement par GitHub Pages.</li>
+</ol>
+<p>Lancez la commande de déploiement automatique :</p>
+<pre><code>1. Préparer les fichiers
+git add .
+
+2. Valider la version
+git commit -m &quot;Mise a jour documentation depuis Obsidian&quot;
+
+3.Connecter à GitHub
+git remote add origin https://github.com/UTILISATEUR/DEPOT.git
+
+4. Envoie de la version
+git push origin master
+
+5. Déployer sur la branche pour crée le site web
+mkdocs gh-deploy
+</code></pre>
+<p>La commande "mkdocs gh-deploy"  va :
+Générer le site statique (HTML/CSS).
+Pousser les fichiers sur la branche gh-pages de votre dépôt.
+Rendre le site accessible publiquement.</p>
+<h3 id="rappel-pour-la-suite">Rappel pour la suite</h3>
+<p>Une fois ce fichier créé, votre structure de dossiers pour la <strong>Mission 1</strong> devrait ressembler à ceci dans VS Code :</p>
+<pre><code>MonProjet/
+├── mkdocs.yml          (La configuration)
+└── docs/
+    ├── index.md        (L'accueil)
+    └── mission1/
+        ├── comparatif.md
+        └── installation.md
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

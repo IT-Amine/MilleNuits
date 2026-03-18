@@ -2,7 +2,20 @@ site_name: MilleNuits
 site_author: Amine
 
 theme:
-  name: mkdocs
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Passer au mode sombre
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Passer au mode clair
 
 extra_css:
   - stylesheets/extra.css
