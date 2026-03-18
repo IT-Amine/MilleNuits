@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Amine">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Explication Sysprep - MilleNuits</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../stylesheets/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">MilleNuits</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">SP2 - Mille Nuits</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mission 1 - Documentation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../mission1/comparatif/" class="dropdown-item">Comparatif Editeurs</a>
+</li>
+            
+<li>
+    <a href="../../mission1/installMk/" class="dropdown-item">Installation MkDocs</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mission 2 - Postes Clients</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../master/" class="dropdown-item">Masterisation</a>
+</li>
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Explication Sysprep</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mission 3 - Déploiement</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../mission3/comparatif/" class="dropdown-item">Comparatif Solutions</a>
+</li>
+            
+<li>
+    <a href="../../mission3/fonctionnement_fog/" class="dropdown-item">Fonctionnement FOG</a>
+</li>
+            
+<li>
+    <a href="../../mission3/fog/" class="dropdown-item">Solution FOG</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mission 4 - Incidents</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../mission4/glpi/" class="dropdown-item">Outil GLPI</a>
+</li>
+            
+<li>
+    <a href="../../mission4/procedures/" class="dropdown-item">Procédures</a>
+</li>
+            
+<li>
+    <a href="../../mission4/users/" class="dropdown-item">Users</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">SP3 - Mille Nuits</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mission 2 - Réseau</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../SP3-MilleNuits/mission2/cisco/" class="dropdown-item">Simulation Cisco Packet Tracer</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../master/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../mission3/comparatif/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#preparation-au-clonage-sysprep" class="nav-link">Préparation au Clonage : Sysprep</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#1-quest-ce-que-sysprep" class="nav-link">1. Qu'est-ce que Sysprep ?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-pourquoi-est-ce-obligatoire" class="nav-link">2. Pourquoi est-ce obligatoire ?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3-la-procedure-technique" class="nav-link">3. La Procédure Technique</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#avertissement-important" class="nav-link">⚠️ Avertissement Important</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<style>
+:root {
+    --couleur-lycee: #1e3a8a; /* Bleu */
+    --couleur-titre: #d97706; /* Orange */
+    --gris-clair: #f3f4f6;
+}
+
+h1 { color: var(--couleur-lycee); border-bottom: 2px solid var(--couleur-titre); padding-bottom: 10px; }
+h2 { color: var(--couleur-lycee); margin-top: 30px; border-bottom: 1px solid #e5e7eb; padding-bottom: 5px; }
+h3 { color: #333; border-left: 4px solid var(--couleur-titre); padding-left: 10px; margin-top: 25px; }
+
+/* En-tête */
+.header-container { 
+    display: flex; align-items: center; justify-content: space-between; 
+    margin-bottom: 40px; border-bottom: 1px solid #ddd; padding-bottom: 20px;
+}
+.logo img { 
+    width: 250px; 
+    height: auto; 
+}
+.info-box { text-align: right; color: #555; font-size: 1em; line-height: 1.4; }
+
+/* Tableaux */
+table { width: 100%; border-collapse: collapse; margin: 20px 0; border-radius: 5px; overflow: hidden; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+th { background-color: var(--couleur-lycee); color: white; padding: 12px; text-transform: uppercase; font-size: 0.9em; }
+td { border: 1px solid #e5e7eb; padding: 10px; text-align: center; }
+td:first-child { text-align: left; font-weight: bold; color: var(--couleur-lycee); }
+tr:nth-child(even) { background-color: #f9fafb; }
+
+/* Boites */
+.calc-box { 
+    background-color: var(--gris-clair); 
+    border-left: 4px solid var(--couleur-titre); 
+    padding: 15px; 
+    margin-bottom: 20px; 
+    border-radius: 0 5px 5px 0;
+}
+.status-ok { color: #166534; font-weight: bold; background-color: #dcfce7; padding: 5px 10px; border-radius: 15px; }
+</style>
+<h1 id="preparation-au-clonage-sysprep">Préparation au Clonage : Sysprep</h1>
+<h2 id="1-quest-ce-que-sysprep">1. Qu'est-ce que Sysprep ?</h2>
+<p><strong>Sysprep</strong> (System Preparation Tool) est un utilitaire Microsoft natif indispensable lors du déploiement d'images Windows.</p>
+<p>Il permet de <strong>"généraliser"</strong> une installation Windows. Concrètement, il nettoie le système de toutes les informations spécifiques à la machine sur laquelle il a été installé, afin de pouvoir cloner ce disque dur sur d'autres ordinateurs.</p>
+<hr />
+<h2 id="2-pourquoi-est-ce-obligatoire">2. Pourquoi est-ce obligatoire ?</h2>
+<p>Chaque installation de Windows possède un <strong>SID (Security Identifier)</strong> unique. C'est la carte d'identité numérique de la machine sur le réseau.</p>
+<h3 id="le-probleme">Le problème :</h3>
+<p>Si nous clonons notre "Master" tel quel sur 19 autres postes :</p>
+<ul>
+<li>Les 20 ordinateurs auront le <strong>MÊME SID</strong>.</li>
+<li><strong>Conséquences :</strong> Conflits graves dans l'Active Directory, problèmes de mises à jour (WSUS), et instabilité réseau.</li>
+</ul>
+<h3 id="la-solution-sysprep">La solution Sysprep :</h3>
+<p>L'action de "Généraliser" va :</p>
+<ol>
+<li>Supprimer le SID unique.</li>
+<li>Supprimer le nom de l'ordinateur.</li>
+<li>Supprimer les pilotes matériels spécifiques (pour forcer une redétection au démarrage).</li>
+<li>Remettre le système en mode "OOBE" (Out-Of-Box Experience), c'est-à-dire l'écran de bienvenue comme au premier démarrage.</li>
+</ol>
+<hr />
+<h2 id="3-la-procedure-technique">3. La Procédure Technique</h2>
+<p>Sur notre machine virtuelle "Master-MilleNuits-W11", une fois tous les logiciels installés (Firefox, LibreOffice, VLC...), voici la procédure à suivre <strong>en tout dernier lieu</strong>.</p>
+<h3 id="etape-1-lancer-loutil">Étape 1 : Lancer l'outil</h3>
+<ol>
+<li>Ouvrir l'explorateur de fichiers.</li>
+<li>Se rendre dans : <code>C:\Windows\System32\Sysprep\</code></li>
+<li>Exécuter le fichier <strong><code>sysprep.exe</code></strong> en tant qu'administrateur.</li>
+</ol>
+<h3 id="etape-2-configuration-crucial">Étape 2 : Configuration (Crucial)</h3>
+<p>Une fenêtre s'ouvre. Il faut impérativement choisir les options suivantes :</p>
+<ul>
+<li><strong>Action de nettoyage du système :</strong></li>
+<li>Choisir : <code>Entrer en mode OOBE (Out-of-Box Experience)</code></li>
+<li>
+<p>Cocher la case : <strong><code>Généraliser</code></strong> (C'est l'option la plus importante !).</p>
+</li>
+<li>
+<p><strong>Options d'arrêt :</strong></p>
+</li>
+<li>Choisir : <code>Arrêter le système</code> (Shutdown).</li>
+</ul>
+<h3 id="etape-3-validation">Étape 3 : Validation</h3>
+<ol>
+<li>Cliquer sur <strong>OK</strong>.</li>
+<li>Sysprep va travailler quelques instants ("Traitement de la phase de généralisation...").</li>
+<li>La VM va s'éteindre toute seule.</li>
+</ol>
+<hr />
+<h2 id="avertissement-important">⚠️ Avertissement Important</h2>
+<p><strong>UNE FOIS LA VM ÉTEINTE APRÈS LE SYSPREP, NE LA RALLUMEZ SURTOUT PAS !</strong></p>
+<ul>
+<li><strong>Si vous la rallumez :</strong> Windows va générer un nouveau SID immédiatement. Votre image n'est plus "généralisée". Il faut refaire le Sysprep.</li>
+<li><strong>La bonne action :</strong> Laisser la VM éteinte et passer immédiatement à la <strong>Mission 3</strong>.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

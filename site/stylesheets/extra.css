@@ -1,0 +1,43 @@
+/* --- THÈME BLEU FONCÉ ET BLANC --- */
+
+:root {
+  --mon-bleu-fonce: #0B2447; /* Un bleu marine très profond et élégant */
+  --mon-blanc: #FFFFFF;
+  --mon-gris-clair: #F5F7FA;
+}
+
+/* Titres en bleu foncé avec une ligne de séparation */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--mon-bleu-fonce) !important;
+}
+
+h1, h2 {
+  border-bottom: 2px solid var(--mon-bleu-fonce);
+  padding-bottom: 4px;
+}
+
+/* Blocs de citation (Callouts) avec bordure bleue et fond légèrement grisé */
+blockquote {
+  border-left: 4px solid var(--mon-bleu-fonce) !important;
+  background-color: var(--mon-gris-clair) !important;
+  color: #333333 !important;
+  padding: 10px 15px;
+  border-radius: 0 5px 5px 0;
+}
+
+/* En-têtes des tableaux en bleu foncé avec texte blanc */
+th {
+  background-color: var(--mon-bleu-fonce) !important;
+  color: var(--mon-blanc) !important;
+}
+
+/* Liens en bleu foncé */
+a {
+  color: var(--mon-bleu-fonce) !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Amine">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Outil GLPI - MilleNuits</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../../stylesheets/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">MilleNuits</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Accueil</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">SP2 - Mille Nuits</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mission 1 - Documentation</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../mission1/comparatif/" class="dropdown-item">Comparatif Editeurs</a>
+</li>
+            
+<li>
+    <a href="../../mission1/installMk/" class="dropdown-item">Installation MkDocs</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mission 2 - Postes Clients</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../mission2/master/" class="dropdown-item">Masterisation</a>
+</li>
+            
+<li>
+    <a href="../../mission2/sysprep/" class="dropdown-item">Explication Sysprep</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mission 3 - Déploiement</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../mission3/comparatif/" class="dropdown-item">Comparatif Solutions</a>
+</li>
+            
+<li>
+    <a href="../../mission3/fonctionnement_fog/" class="dropdown-item">Fonctionnement FOG</a>
+</li>
+            
+<li>
+    <a href="../../mission3/fog/" class="dropdown-item">Solution FOG</a>
+</li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mission 4 - Incidents</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Outil GLPI</a>
+</li>
+            
+<li>
+    <a href="../procedures/" class="dropdown-item">Procédures</a>
+</li>
+            
+<li>
+    <a href="../users/" class="dropdown-item">Users</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">SP3 - Mille Nuits</a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Mission 2 - Réseau</a>
+    <ul class="dropdown-menu">
+            
+<li>
+    <a href="../../../SP3-MilleNuits/mission2/cisco/" class="dropdown-item">Simulation Cisco Packet Tracer</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../mission3/fog/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../procedures/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#installation-de-glpi-service-desk" class="nav-link">Installation de GLPI (Service Desk)</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#1-prerequis-et-pile-lamp" class="nav-link">1. Prérequis et Pile LAMP</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#2-base-de-donnees-mariadb" class="nav-link">2. Base de Données (MariaDB)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#3-installation-des-fichiers-glpi" class="nav-link">3. Installation des fichiers GLPI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#4-configuration-apache-virtualhost" class="nav-link">4. Configuration Apache (VirtualHost)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#5-finalisation-web" class="nav-link">5. Finalisation Web</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<style>
+:root {
+    --couleur-lycee: #1e3a8a; /* Bleu */
+    --couleur-titre: #d97706; /* Orange */
+    --gris-clair: #f3f4f6;
+}
+
+h1 { color: var(--couleur-lycee); border-bottom: 2px solid var(--couleur-titre); padding-bottom: 10px; }
+h2 { color: var(--couleur-lycee); margin-top: 30px; border-bottom: 1px solid #e5e7eb; padding-bottom: 5px; }
+h3 { color: #333; border-left: 4px solid var(--couleur-titre); padding-left: 10px; margin-top: 25px; }
+
+/* En-tête */
+.header-container { 
+    display: flex; align-items: center; justify-content: space-between; 
+    margin-bottom: 40px; border-bottom: 1px solid #ddd; padding-bottom: 20px;
+}
+.logo img { 
+    width: 250px; 
+    height: auto; 
+}
+.info-box { text-align: right; color: #555; font-size: 1em; line-height: 1.4; }
+
+/* Tableaux */
+table { width: 100%; border-collapse: collapse; margin: 20px 0; border-radius: 5px; overflow: hidden; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
+th { background-color: var(--couleur-lycee); color: white; padding: 12px; text-transform: uppercase; font-size: 0.9em; }
+td { border: 1px solid #e5e7eb; padding: 10px; text-align: center; }
+td:first-child { text-align: left; font-weight: bold; color: var(--couleur-lycee); }
+tr:nth-child(even) { background-color: #f9fafb; }
+
+/* Boites */
+.calc-box { 
+    background-color: var(--gris-clair); 
+    border-left: 4px solid var(--couleur-titre); 
+    padding: 15px; 
+    margin-bottom: 20px; 
+    border-radius: 0 5px 5px 0;
+}
+.status-ok { color: #166534; font-weight: bold; background-color: #dcfce7; padding: 5px 10px; border-radius: 15px; }
+</style>
+
+<h1 id="installation-de-glpi-service-desk">Installation de GLPI (Service Desk)</h1>
+<p><strong>Serveur :</strong> MN06</p>
+<p><strong>OS :</strong> Debian 12</p>
+<p><strong>Rôle :</strong> Gestionnaire de Parc et Incidents</p>
+<hr />
+<h2 id="1-prerequis-et-pile-lamp">1. Prérequis et Pile LAMP</h2>
+<p>GLPI nécessite un serveur Web, une base de données et PHP. Nous installons la version <strong>PHP 8.2</strong> pour garantir la compatibilité avec GLPI 10.</p>
+<h3 id="a-installation-des-paquets">A. Installation des paquets</h3>
+<pre><code># Mise à jour du système
+sudo apt update &amp;&amp; sudo apt upgrade -y
+
+# Installation Apache, MariaDB et extensions PHP requises
+sudo apt install apache2 mariadb-server php8.2 php8.2-fpm php8.2-mysql \
+php8.2-curl php8.2-gd php8.2-intl php8.2-mbstring php8.2-xml \
+php8.2-zip php8.2-bz2 php8.2-ldap -y
+</code></pre>
+<h3 id="b-configuration-php-apache">B. Configuration PHP &amp; Apache</h3>
+<p>Activation des modules nécessaires et redémarrage des services :</p>
+<pre><code>sudo a2enconf php8.2-fpm
+sudo a2enmod proxy_fcgi setenvif rewrite
+sudo systemctl restart apache2
+</code></pre>
+<hr />
+<h2 id="2-base-de-donnees-mariadb">2. Base de Données (MariaDB)</h2>
+<p>Nous créons une base dédiée à l'environnement <strong>Mille Nuits</strong>.</p>
+<blockquote>
+<p>note "🔐 Identifiants Database" </p>
+<p><strong>Base :</strong> <code>db_millenuits_glpi</code> </p>
+<p><strong>Utilisateur :</strong> <code>admin_millenuits</code> </p>
+<p><strong>Mot de passe :</strong><code>M1lleNuits_Secret!2026</code></p>
+</blockquote>
+<p><strong>Procédure SQL :</strong></p>
+<p>SQL</p>
+<pre><code>-- Connexion en root
+sudo mysql -u root
+
+-- Création de la base (UTF8MB4 pour supporter les émojis dans les tickets)
+CREATE DATABASE db_millenuits_glpi CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- Création de l'utilisateur
+CREATE USER 'admin_millenuits'@'localhost' IDENTIFIED BY 'M1lleNuits_Secret!2026';
+
+-- Attribution des droits
+GRANT ALL PRIVILEGES ON db_millenuits_glpi.* TO 'admin_millenuits'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+</code></pre>
+<hr />
+<h2 id="3-installation-des-fichiers-glpi">3. Installation des fichiers GLPI</h2>
+<p>Nous installons la version stable <strong>10.0.12</strong> dans le dossier web.</p>
+<pre><code>cd /tmp
+# Téléchargement
+wget [https://github.com/glpi-project/glpi/releases/download/10.0.12/glpi-10.0.12.tgz](https://github.com/glpi-project/glpi/releases/download/10.0.12/glpi-10.0.12.tgz)
+
+# Extraction et déplacement
+tar -xzvf glpi-10.0.12.tgz
+sudo mv glpi /var/www/html/
+
+# Attribution des permissions (CRITIQUE pour le fonctionnement)
+sudo chown -R www-data:www-data /var/www/html/glpi/
+sudo chmod -R 755 /var/www/html/glpi/
+</code></pre>
+<hr />
+<h2 id="4-configuration-apache-virtualhost">4. Configuration Apache (VirtualHost)</h2>
+<p>Fichier : <code>/etc/apache2/sites-available/glpi.conf</code></p>
+<p>Apache</p>
+<pre><code>&lt;VirtualHost *:80&gt;
+    ServerName glpi.millenuits.lan
+    DocumentRoot /var/www/html/glpi
+
+    &lt;Directory /var/www/html/glpi&gt;
+        AllowOverride All
+        Require all granted
+    &lt;/Directory&gt;
+
+    ErrorLog ${APACHE_LOG_DIR}/error-glpi.log
+    CustomLog ${APACHE_LOG_DIR}/access-glpi.log combined
+&lt;/VirtualHost&gt;
+</code></pre>
+<p><strong>Activation du site :</strong></p>
+<pre><code>sudo a2ensite glpi.conf
+sudo a2dissite 000-default.conf
+sudo systemctl reload apache2
+</code></pre>
+<hr />
+<h2 id="5-finalisation-web">5. Finalisation Web</h2>
+<ol>
+<li>
+<p>Ouvrir le navigateur sur le poste Administrateur.</p>
+</li>
+<li>
+<p>Accéder à l'URL : <code>http://172.16.52.20</code> (IP du serveur GLPI-MN06).</p>
+</li>
+<li>
+<p>Suivre l'assistant d'installation.</p>
+</li>
+</ol>
+<p><strong>Paramètres de connexion BDD :</strong></p>
+<table>
+<thead>
+<tr>
+<th>Champ</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Serveur SQL</strong></td>
+<td><code>localhost</code></td>
+</tr>
+<tr>
+<td><strong>Utilisateur</strong></td>
+<td><code>admin_millenuits</code></td>
+</tr>
+<tr>
+<td><strong>Mot de passe</strong></td>
+<td><code>M1lleNuits_Secret!2026</code></td>
+</tr>
+</tbody>
+</table>
+<div class="calc-box">
+⚠️ <strong>Sécurité Post-Installation </strong><br>
+Une fois l'installation terminée, il est impératif de supprimer le fichier d'installation pour empêcher une réinitialisation malveillante : 
+
+`sudo rm /var/www/html/glpi/install/install.php`
+</div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
