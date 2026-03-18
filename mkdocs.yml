@@ -1,28 +1,29 @@
-site_name: Documentation Mille Nuits - SP2
+site_name: IMDEO
 site_author: Amine
 
 theme:
-  name: material
-  logo: assets/logo.png
-  favicon: assets/logo.png
-  language: fr
-  palette: 
-    primary: indigo
-    accent: blue
+  name: mkdocs
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Accueil: index.md
-  - Mission 1 - Documentation:
-      - Comparatif Editeurs: mission1/comparatif.md
-      - Installation MkDocs: mission1/installMk.md
-  - Mission 2 - Postes Clients:
-      - Masterisation: mission2/master.md
-      - Explication Sysprep: mission2/sysprep.md
-  - Mission 3 - Déploiement:
-      - Comparatif Solutions: mission3/comparatif.md
-      - Fonctionnement FOG: mission3/fonctionnement_fog.md
-      - Solution FOG: mission3/fog.md
-  - Mission 4 - Incidents:
-      - Outil GLPI: mission4/glpi.md
-      - Procédures: mission4/procedures.md
-      - Users: mission4/users.md
+  - SP2 - Mille Nuits:
+      - Mission 1 - Documentation:
+          - Comparatif Editeurs: SP2-MilleNuits/mission1/comparatif.md
+          - Installation MkDocs: SP2-MilleNuits/mission1/installMk.md
+      - Mission 2 - Postes Clients:
+          - Masterisation: SP2-MilleNuits/mission2/master.md
+          - Explication Sysprep: SP2-MilleNuits/mission2/sysprep.md
+      - Mission 3 - Déploiement:
+          - Comparatif Solutions: SP2-MilleNuits/mission3/comparatif.md
+          - Fonctionnement FOG: SP2-MilleNuits/mission3/fonctionnement_fog.md
+          - Solution FOG: SP2-MilleNuits/mission3/fog.md
+      - Mission 4 - Incidents:
+          - Outil GLPI: SP2-MilleNuits/mission4/glpi.md
+          - Procédures: SP2-MilleNuits/mission4/procedures.md
+          - Users: SP2-MilleNuits/mission4/users.md
+  - SP3 - Mille Nuits:
+      - Mission 2 - Réseau:
+          - Cisco: SP3-MilleNuits/mission2/cisco.md

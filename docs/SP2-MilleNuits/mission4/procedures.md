@@ -38,6 +38,7 @@ tr:nth-child(even) { background-color: #f9fafb; }
 .status-ok { color: #166534; font-weight: bold; background-color: #dcfce7; padding: 5px 10px; border-radius: 15px; }
 </style>
 
+
 # Procédures de Gestion d'Incidents
 
 Ce guide explique comment utiliser GLPI pour le support informatique de **Mille Nuits**, couvrant le cycle de vie complet d'un ticket.
@@ -58,7 +59,7 @@ L'utilisateur rencontre un problème (ex: "Pas de connexion internet" ou "Souris
     * **Description :** Détail du problème.
 4. Valider. Le ticket passe au statut **"Nouveau"**.
 
-
+![[ticket.png]]
 
 ---
 
@@ -71,7 +72,7 @@ Le service informatique reçoit la demande.
 2. Il ouvre le ticket et change le statut en **"En cours (Attribué)"**.
 3. Il s'assigne le ticket (bouton "S'attribuer").
 
-
+![[tech1.png]]
 ### Étape B : Résolution et Documentation
 1. Le technicien intervient (à distance ou sur place).
 2. Il ajoute une tâche dans l'onglet **"Traitement du ticket"** pour expliquer ce qu'il a fait (ex: *Remplacement du câble RJ45*).
@@ -83,7 +84,7 @@ Le service informatique reçoit la demande.
 2. Il valide la solution (ou le ticket se clôture automatiquement après 24h).
 3. Statut final : **"Clos"**.
 
-
+![[tech2.png]]
 
 ---
 ## 4. Statistiques

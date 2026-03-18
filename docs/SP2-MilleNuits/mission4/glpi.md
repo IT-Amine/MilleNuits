@@ -38,6 +38,7 @@ tr:nth-child(even) { background-color: #f9fafb; }
 .status-ok { color: #166534; font-weight: bold; background-color: #dcfce7; padding: 5px 10px; border-radius: 15px; }
 </style>
 
+
 # Installation de GLPI (Service Desk)
 
 **Serveur :** MN06

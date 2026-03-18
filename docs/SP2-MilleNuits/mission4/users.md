@@ -38,6 +38,7 @@ tr:nth-child(even) { background-color: #f9fafb; }
 .status-ok { color: #166534; font-weight: bold; background-color: #dcfce7; padding: 5px 10px; border-radius: 15px; }
 </style>
 
+
 # DOCUMENTATION : GESTION DES UTILISATEURS GLPI
 
 Ce document détaille la stratégie de gestion des accès et la procédure de création des comptes dans le système de Helpdesk (GLPI) pour l'infrastructure Mille Nuits. L'objectif est de garantir le principe de moindre privilège selon le rôle de chaque collaborateur.
