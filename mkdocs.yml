@@ -42,3 +42,4 @@ nav:
   - SP3 - Mille Nuits:
       - Mission 2 - Réseau:
           - Simulation Cisco Packet Tracer: SP3-MilleNuits/mission2/cisco.md
+          - Linux DHCP: SP3-MilleNuits/mission2/dhcp.md
