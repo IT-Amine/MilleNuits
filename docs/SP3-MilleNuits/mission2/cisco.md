@@ -11,7 +11,7 @@ Afin de permettre la distribution automatique des adresses IP sur tout le parc, 
 * **Serveur DHCP (MN11) opérationnel :** L'adresse IP fixe du serveur Linux doit être connue. Dans cette procédure, l'adresse utilisée est `172.16.52.11`.
 * **Pools configurés :** Les plages d'adresses pour les réseaux `172.40.x.x` doivent être actives sur le serveur.
 
-![[MkDocs-MilleNuits/docs/img/dhcplinux.jpg]]
+![Image DHCP Linux](../../img/dhcplinux.jpg)
 
 ## 3. PROCÉDURE DE DÉPLOIEMENT (CLI CISCO)
 
