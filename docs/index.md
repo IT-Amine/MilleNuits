@@ -3,6 +3,17 @@
 Bienvenue sur la documentation technique officielle du projet **Mille Nuits**.
 Ce site regroupe l'ensemble des procédures, comparatifs et guides techniques réalisés pour la modernisation et la sécurisation de l'infrastructure informatique de l'entreprise.
 
+## Plan d'adressage (VLSM) 
+
+| ID VLAN | Service             | Adresse Réseau |      Masque (CIDR)      | Adresse de Diffusion | Passerelle (Gateway) |
+| :-----: | :------------------ | :------------- | :---------------------: | :------------------- | :------------------- |
+| **30**  | **Production**      | `172.40.0.0`   |  `/24` (255.255.255.0)  | `172.40.0.255`       | **172.40.0.254**     |
+| **20**  | **Autres**          | `172.40.1.0`   | `/25` (255.255.255.128) | `172.40.1.127`       | **172.40.1.126**     |
+| **10**  | **Administratif**   | `172.40.1.128` | `/25` (255.255.255.128) | `172.40.1.255`       | **172.40.1.254**     |
+| **50**  | **Ventes & Études** | `172.40.2.0`   | `/26` (255.255.255.192) | `172.40.2.63`        | **172.40.2.62**      |
+| **40**  | **Logistique**      | `172.40.2.64`  | `/26` (255.255.255.192) | `172.40.2.127`       | **172.40.2.126**     |
+| **52**  | **Serveurs**        | `172.16.52.0`  |  `/24` (255.255.255.0)  | `172.16.52.255`      | **172.16.52.253**    |
+
 Le projet est divisé en deux grandes situations professionnelles (SP) :
 
 ---

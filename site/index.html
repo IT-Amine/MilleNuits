@@ -292,6 +292,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#plan-dadressage-vlsm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plan d'adressage (VLSM)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sp2-gestion-du-parc-informatique" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1217,6 +1228,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#plan-dadressage-vlsm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plan d'adressage (VLSM)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#sp2-gestion-du-parc-informatique" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1269,6 +1291,69 @@
 <h1 id="projet-mille-nuits-infrastructure-informatique">Projet Mille Nuits : Infrastructure Informatique</h1>
 <p>Bienvenue sur la documentation technique officielle du projet <strong>Mille Nuits</strong>.
 Ce site regroupe l'ensemble des procédures, comparatifs et guides techniques réalisés pour la modernisation et la sécurisation de l'infrastructure informatique de l'entreprise.</p>
+<h2 id="plan-dadressage-vlsm">Plan d'adressage (VLSM)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ID VLAN</th>
+<th style="text-align: left;">Service</th>
+<th style="text-align: left;">Adresse Réseau</th>
+<th style="text-align: center;">Masque (CIDR)</th>
+<th style="text-align: left;">Adresse de Diffusion</th>
+<th style="text-align: left;">Passerelle (Gateway)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>30</strong></td>
+<td style="text-align: left;"><strong>Production</strong></td>
+<td style="text-align: left;"><code>172.40.0.0</code></td>
+<td style="text-align: center;"><code>/24</code> (255.255.255.0)</td>
+<td style="text-align: left;"><code>172.40.0.255</code></td>
+<td style="text-align: left;"><strong>172.40.0.254</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>20</strong></td>
+<td style="text-align: left;"><strong>Autres</strong></td>
+<td style="text-align: left;"><code>172.40.1.0</code></td>
+<td style="text-align: center;"><code>/25</code> (255.255.255.128)</td>
+<td style="text-align: left;"><code>172.40.1.127</code></td>
+<td style="text-align: left;"><strong>172.40.1.126</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>10</strong></td>
+<td style="text-align: left;"><strong>Administratif</strong></td>
+<td style="text-align: left;"><code>172.40.1.128</code></td>
+<td style="text-align: center;"><code>/25</code> (255.255.255.128)</td>
+<td style="text-align: left;"><code>172.40.1.255</code></td>
+<td style="text-align: left;"><strong>172.40.1.254</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>50</strong></td>
+<td style="text-align: left;"><strong>Ventes &amp; Études</strong></td>
+<td style="text-align: left;"><code>172.40.2.0</code></td>
+<td style="text-align: center;"><code>/26</code> (255.255.255.192)</td>
+<td style="text-align: left;"><code>172.40.2.63</code></td>
+<td style="text-align: left;"><strong>172.40.2.62</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>40</strong></td>
+<td style="text-align: left;"><strong>Logistique</strong></td>
+<td style="text-align: left;"><code>172.40.2.64</code></td>
+<td style="text-align: center;"><code>/26</code> (255.255.255.192)</td>
+<td style="text-align: left;"><code>172.40.2.127</code></td>
+<td style="text-align: left;"><strong>172.40.2.126</strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>52</strong></td>
+<td style="text-align: left;"><strong>Serveurs</strong></td>
+<td style="text-align: left;"><code>172.16.52.0</code></td>
+<td style="text-align: center;"><code>/24</code> (255.255.255.0)</td>
+<td style="text-align: left;"><code>172.16.52.255</code></td>
+<td style="text-align: left;"><strong>172.16.52.253</strong></td>
+</tr>
+</tbody>
+</table>
 <p>Le projet est divisé en deux grandes situations professionnelles (SP) :</p>
 <hr />
 <h2 id="sp2-gestion-du-parc-informatique">SP2 : Gestion du Parc Informatique</h2>
