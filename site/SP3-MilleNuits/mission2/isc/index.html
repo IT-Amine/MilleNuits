@@ -1066,6 +1066,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#7mise-en-place-sur-le-routeur-laide-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.MISE EN PLACE SUR LE ROUTEUR L'AIDE DHCP
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1210,6 +1221,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#7mise-en-place-sur-le-routeur-laide-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.MISE EN PLACE SUR LE ROUTEUR L'AIDE DHCP
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1328,6 +1350,40 @@ systemctl status isc-dhcp-server
 <pre><code class="language-Bash">cat /var/lib/dhcp/dhcpd.leases
 </code></pre>
 <p>Chaque nouvelle adresse distribuée apparaîtra dans ce fichier avec l'adresse MAC du client associé.</p>
+<h2 id="7mise-en-place-sur-le-routeur-laide-dhcp">7.MISE EN PLACE SUR LE ROUTEUR L'AIDE DHCP</h2>
+<p>Les commandes suivantes permettent d'indiquer au routeur de transférer les requêtes DHCP entrantes sur les sous-interfaces clientes directement vers l'adresse IP (Unicast) du serveur MN11.</p>
+<pre><code>enable
+configure terminal
+
+! Configuration du relais pour le VLAN 10 (Administratif)
+interface GigabitEthernet0/0.10
+ ip helper-address 172.16.52.11
+ exit
+
+! Configuration du relais pour le VLAN 20 (Autres / Direction)
+interface GigabitEthernet0/0.20
+ ip helper-address 172.16.52.11
+ exit
+
+! Configuration du relais pour le VLAN 30 (Production)
+interface GigabitEthernet0/0.30
+ ip helper-address 172.16.52.11
+ exit
+
+! Configuration du relais pour le VLAN 40 (Logistique)
+interface GigabitEthernet0/0.40
+ ip helper-address 172.16.52.11
+ exit
+
+! Configuration du relais pour le VLAN 50 (Ventes &amp; Études)
+interface GigabitEthernet0/0.50
+ ip helper-address 172.16.52.11
+ exit
+
+! Enregistrement de la configuration en NVRAM
+end
+write memory
+</code></pre>
 
 
 

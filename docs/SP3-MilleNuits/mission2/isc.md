@@ -133,3 +133,42 @@ cat /var/lib/dhcp/dhcpd.leases
 ```
 
 Chaque nouvelle adresse distribuée apparaîtra dans ce fichier avec l'adresse MAC du client associé.
+
+## 7.MISE EN PLACE SUR LE ROUTEUR L'AIDE DHCP
+
+Les commandes suivantes permettent d'indiquer au routeur de transférer les requêtes DHCP entrantes sur les sous-interfaces clientes directement vers l'adresse IP (Unicast) du serveur MN11.
+
+```
+enable
+configure terminal
+
+! Configuration du relais pour le VLAN 10 (Administratif)
+interface GigabitEthernet0/0.10
+ ip helper-address 172.16.52.11
+ exit
+
+! Configuration du relais pour le VLAN 20 (Autres / Direction)
+interface GigabitEthernet0/0.20
+ ip helper-address 172.16.52.11
+ exit
+
+! Configuration du relais pour le VLAN 30 (Production)
+interface GigabitEthernet0/0.30
+ ip helper-address 172.16.52.11
+ exit
+
+! Configuration du relais pour le VLAN 40 (Logistique)
+interface GigabitEthernet0/0.40
+ ip helper-address 172.16.52.11
+ exit
+
+! Configuration du relais pour le VLAN 50 (Ventes & Études)
+interface GigabitEthernet0/0.50
+ ip helper-address 172.16.52.11
+ exit
+
+! Enregistrement de la configuration en NVRAM
+end
+write memory
+```
+
