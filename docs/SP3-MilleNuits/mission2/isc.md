@@ -3,10 +3,15 @@
 ## 1. PRÉREQUIS
 
 Avant de commencer l'installation, le serveur Linux (MN11) doit posséder une configuration réseau statique.
+
 * **OS :** Debian 13 (Trixie)
+
 * **Adresse IP du serveur :** `172.16.52.11`
+
 * **Masque :** `255.255.255.0` (/24)
+
 * **Passerelle :** `172.16.52.253` (Interface du VLAN Serveurs sur le routeur)
+
 * Les commandes doivent être exécutées en tant que `root` (ou précédées de `sudo`).
 
 ## 2. INSTALLATION DU SERVICE
@@ -128,10 +133,3 @@ cat /var/lib/dhcp/dhcpd.leases
 ```
 
 Chaque nouvelle adresse distribuée apparaîtra dans ce fichier avec l'adresse MAC du client associé.
-
-### Le piège classique sur Linux
-Regarde bien le début de la configuration du fichier `dhcpd.conf`, j'ai mis ce bloc :
-```
-subnet 172.16.52.0 netmask 255.255.255.0 {
-}
-````
