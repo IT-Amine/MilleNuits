@@ -42,7 +42,10 @@ nav:
           - Procédures: SP2-MilleNuits/mission4/procedures.md
           - Users: SP2-MilleNuits/mission4/users.md
   - SP3 - Mille Nuits:
-      - Mission 2 - Réseau:
+      - Mission 1 - WinServer:
+          - Configuration Windows Serveur 2019: SP3-MilleNuits/mission1/winserv.md
+          - Mise en place de l'arborescence: SP3-MilleNuits/mission1/annuaire.md
+      - Mission 2 - DHCP:
           - Simulation Cisco Packet Tracer: SP3-MilleNuits/mission2/cisco.md
           - Linux DHCP ISC: SP3-MilleNuits/mission2/isc.md
           - Linux DHCP KEA: SP3-MilleNuits/mission2/kea.md
