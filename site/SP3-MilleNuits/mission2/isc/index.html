@@ -1064,23 +1064,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6. LECTURE DES BAUX (LOGS)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#le-piege-classique-sur-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Le piège classique sur Linux
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -1225,23 +1208,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6. LECTURE DES BAUX (LOGS)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#le-piege-classique-sur-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Le piège classique sur Linux
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
     </ul>
@@ -1263,12 +1229,24 @@
 
 <h1 id="documentation-deploiement-du-serveur-dhcp-mn11-sous-debian-13">DOCUMENTATION : DÉPLOIEMENT DU SERVEUR DHCP (MN11) SOUS DEBIAN 13</h1>
 <h2 id="1-prerequis">1. PRÉREQUIS</h2>
-<p>Avant de commencer l'installation, le serveur Linux (MN11) doit posséder une configuration réseau statique.
-* <strong>OS :</strong> Debian 13 (Trixie)
-* <strong>Adresse IP du serveur :</strong> <code>172.16.52.11</code>
-* <strong>Masque :</strong> <code>255.255.255.0</code> (/24)
-* <strong>Passerelle :</strong> <code>172.16.52.253</code> (Interface du VLAN Serveurs sur le routeur)
-* Les commandes doivent être exécutées en tant que <code>root</code> (ou précédées de <code>sudo</code>).</p>
+<p>Avant de commencer l'installation, le serveur Linux (MN11) doit posséder une configuration réseau statique.</p>
+<ul>
+<li>
+<p><strong>OS :</strong> Debian 13 (Trixie)</p>
+</li>
+<li>
+<p><strong>Adresse IP du serveur :</strong> <code>172.16.52.11</code></p>
+</li>
+<li>
+<p><strong>Masque :</strong> <code>255.255.255.0</code> (/24)</p>
+</li>
+<li>
+<p><strong>Passerelle :</strong> <code>172.16.52.253</code> (Interface du VLAN Serveurs sur le routeur)</p>
+</li>
+<li>
+<p>Les commandes doivent être exécutées en tant que <code>root</code> (ou précédées de <code>sudo</code>).</p>
+</li>
+</ul>
 <h2 id="2-installation-du-service">2. INSTALLATION DU SERVICE</h2>
 <p>Mettre à jour la liste des paquets et installer le service DHCP officiel (<code>isc-dhcp-server</code>) :</p>
 <pre><code class="language-bash">apt update
@@ -1350,12 +1328,6 @@ systemctl status isc-dhcp-server
 <pre><code class="language-Bash">cat /var/lib/dhcp/dhcpd.leases
 </code></pre>
 <p>Chaque nouvelle adresse distribuée apparaîtra dans ce fichier avec l'adresse MAC du client associé.</p>
-<h3 id="le-piege-classique-sur-linux">Le piège classique sur Linux</h3>
-<p>Regarde bien le début de la configuration du fichier <code>dhcpd.conf</code>, j'ai mis ce bloc :
-```
-subnet 172.16.52.0 netmask 255.255.255.0 {
-}
-````</p>
 
 
 
@@ -1405,7 +1377,7 @@ subnet 172.16.52.0 netmask 255.255.255.0 {
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>

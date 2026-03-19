@@ -5,6 +5,8 @@ theme:
   name: material
   logo: assets/logo.png
   favicon: assets/logo.png
+  features:
+    - content.code.copy
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -44,4 +46,3 @@ nav:
           - Simulation Cisco Packet Tracer: SP3-MilleNuits/mission2/cisco.md
           - Linux DHCP ISC: SP3-MilleNuits/mission2/isc.md
           - Linux DHCP KEA: SP3-MilleNuits/mission2/kea.md
-
