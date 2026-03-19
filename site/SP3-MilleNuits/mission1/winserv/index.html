@@ -1500,7 +1500,7 @@
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Adresse IP</strong></td>
-<td style="text-align: left;">172.16.52.100</td>
+<td style="text-align: left;">172.16.52.1</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Masque de sous-réseau</strong></td>
@@ -1510,40 +1510,82 @@
 <td style="text-align: left;"><strong>Passerelle par défaut</strong></td>
 <td style="text-align: left;">172.16.52.252</td>
 </tr>
+<tr>
+<td style="text-align: left;">DNS</td>
+<td style="text-align: left;">172.16.52.1 &amp; 1.1.1.1</td>
+</tr>
 </tbody>
 </table>
 <h2 id="3-securite-et-comptes-dadministration">3. SÉCURITÉ ET COMPTES D'ADMINISTRATION</h2>
 <p>Dans le cadre du durcissement du serveur, les mots de passe par défaut ont été modifiés. Ce compte Administrateur permet la gestion complète du serveur et de la forêt Active Directory.</p>
 <div class="calc-box">
-🔐 <strong>Politique de mots de passe :</strong><br>
+🔐 <strong>Politique de mots de passe :</strong>
 <ul>
+<br>
 <li><strong>Compte Administrateur :</strong> L'ancien mot de passe (<code>Etudiant_007</code>) a été remplacé par <code>Mille_Nuits26!</code>.</li>
+<br>
 <li><strong>Mode DSRM :</strong> Le mot de passe du Directory Services Restore Mode (utilisé en cas de crash et de restauration de l'annuaire) a également été défini sur <code>Mille_Nuits26!</code>.</li>
 </ul>
 </div>
 
 <h2 id="4-deploiement-du-service-active-directory">4. DÉPLOIEMENT DU SERVICE ACTIVE DIRECTORY</h2>
 <h3 id="41-installation-du-role-ad-ds">4.1. Installation du rôle AD DS</h3>
-<p>Le rôle <strong>Active Directory Domain Services (AD DS)</strong> a été installé via l'interface graphique selon la procédure suivante :
-1. Ouverture du <strong>Gestionnaire de serveur</strong>.
-2. Clic sur <strong>Gérer</strong> &gt; <strong>Ajouter des rôles et des fonctionnalités</strong>.
-3. Dans la sélection des rôles, la case <strong>Services AD DS</strong> a été cochée (ainsi que l'ajout des fonctionnalités requises).
-4. Validation des étapes jusqu'à l'installation complète du rôle.</p>
+<p>Le rôle <strong>Active Directory Domain Services (AD DS)</strong> a été installé via l'interface graphique selon la procédure suivante :</p>
+<ol>
+<li>
+<p>Ouverture du <strong>Gestionnaire de serveur</strong>.</p>
+</li>
+<li>
+<p>Clic sur <strong>Gérer</strong> &gt; <strong>Ajouter des rôles et des fonctionnalités</strong>.</p>
+</li>
+<li>
+<p>Dans la sélection des rôles, la case <strong>Services AD DS</strong> a été cochée (ainsi que l'ajout des fonctionnalités requises).</p>
+</li>
+<li>
+<p>Validation des étapes jusqu'à l'installation complète du rôle.</p>
+</li>
+</ol>
 <h3 id="42-promotion-en-controleur-de-domaine">4.2. Promotion en Contrôleur de Domaine</h3>
-<p>Une fois le rôle installé, le serveur a été promu pour créer le nouveau domaine de l'entreprise :
-1. Clic sur l'icône de notification (drapeau jaune) dans le Gestionnaire de serveur.
-2. Sélection de l'option <strong>Promouvoir ce serveur en contrôleur de domaine</strong>.
-3. Choix de l'opération : <strong>Ajouter une nouvelle forêt</strong>.
-4. Saisie du nom de domaine racine : <code>MN01.lan</code>.
-5. Saisie du mot de passe de restauration DSRM (<code>Mille_Nuits26!</code>).
-6. Lancement des vérifications préalables, puis clic sur <strong>Installer</strong>. Le serveur redémarre automatiquement à la fin du processus.</p>
+<p>Une fois le rôle installé, le serveur a été promu pour créer le nouveau domaine de l'entreprise :</p>
+<ol>
+<li>
+<p>Clic sur l'icône de notification (drapeau jaune) dans le Gestionnaire de serveur.</p>
+</li>
+<li>
+<p>Sélection de l'option <strong>Promouvoir ce serveur en contrôleur de domaine</strong>.</p>
+</li>
+<li>
+<p>Choix de l'opération : <strong>Ajouter une nouvelle forêt</strong>.</p>
+</li>
+<li>
+<p>Saisie du nom de domaine racine : <code>MN01.lan</code>.</p>
+</li>
+<li>
+<p>Saisie du mot de passe de restauration DSRM (<code>Mille_Nuits26!</code>).</p>
+</li>
+<li>
+<p>Lancement des vérifications préalables, puis clic sur <strong>Installer</strong>. Le serveur redémarre automatiquement à la fin du processus.</p>
+</li>
+</ol>
 <h3 id="43-structuration-de-lannuaire">4.3. Structuration de l'annuaire</h3>
-<p>Afin d'organiser logiquement les objets de l'entreprise, des Unités d'Organisation (OU) ont été créées à la racine du domaine :
-* 📁 Administratif
-* 📁 Direction
-* 📁 Logistique
-* 📁 Production
-* 📁 Vente</p>
+<p>Afin d'organiser logiquement les objets de l'entreprise, des Unités d'Organisation (OU) ont été créées à la racine du domaine :</p>
+<ul>
+<li>
+<p>📁 Administratif</p>
+</li>
+<li>
+<p>📁 Direction</p>
+</li>
+<li>
+<p>📁 Logistique</p>
+</li>
+<li>
+<p>📁 Production</p>
+</li>
+<li>
+<p>📁 Vente</p>
+</li>
+</ul>
 <p>Cette structuration permet une meilleure gestion des utilisateurs, des groupes et la future application de stratégies de groupe (GPO).</p>
 <h2 id="5-creation-des-utilisateurs-et-groupes">5. CRÉATION DES UTILISATEURS ET GROUPES</h2>
 <p>Afin de respecter l'organisation fonctionnelle du domaine, un groupe de sécurité a été créé pour chaque OU (ex: <em>Groupe Administratif</em>, <em>Groupe Logistique</em>, etc.). Chaque utilisateur a ensuite été affecté à l'OU et au groupe correspondant à son service.</p>
@@ -1598,15 +1640,29 @@ L'intégration des utilisateurs dans leurs groupes respectifs permet une gestion
 <p>Le rôle DNS ayant été installé conjointement à l'AD DS, une configuration de sécurité spécifique a été appliquée : <strong>la récursivité DNS a été désactivée.</strong></p>
 <h3 id="61-procedure-de-desactivation">6.1. Procédure de désactivation</h3>
 <ol>
-<li>Ouverture de la console <strong>Gestionnaire DNS</strong> depuis les Outils d'administration.</li>
-<li>Clic droit sur le nom du serveur (<code>MN01</code>) et sélection de <strong>Propriétés</strong>.</li>
-<li>Dans l'onglet <strong>Avancé</strong>, la case <strong>Désactiver la récursivité (désactive également les redirecteurs)</strong> a été cochée, puis validée.</li>
+<li>
+<p>Ouverture de la console <strong>Gestionnaire DNS</strong> depuis les Outils d'administration.</p>
+</li>
+<li>
+<p>Clic droit sur le nom du serveur (<code>MN01</code>) et sélection de <strong>Propriétés</strong>.</p>
+</li>
+<li>
+<p>Dans l'onglet <strong>Avancé</strong>, la case <strong>Désactiver la récursivité (désactive également les redirecteurs)</strong> a été cochée, puis validée.</p>
+</li>
 </ol>
 <h3 id="62-objectifs-de-cette-configuration">6.2. Objectifs de cette configuration</h3>
-<p>Cette action permet de :
-* Empêcher le serveur de résoudre des noms externes (Internet).
-* Limiter les réponses aux seules requêtes internes au domaine <code>MN01.lan</code>.
-* Améliorer la sécurité globale du service DNS en évitant les attaques de type <em>DNS Amplification</em>. Le serveur fonctionne ainsi uniquement pour sa zone locale.</p>
+<p>Cette action permet de :</p>
+<ul>
+<li>
+<p>Empêcher le serveur de résoudre des noms externes (Internet).</p>
+</li>
+<li>
+<p>Limiter les réponses aux seules requêtes internes au domaine <code>MN01.lan</code>.</p>
+</li>
+<li>
+<p>Améliorer la sécurité globale du service DNS en évitant les attaques de type <em>DNS Amplification</em>. Le serveur fonctionne ainsi uniquement pour sa zone locale.</p>
+</li>
+</ul>
 
 
 
