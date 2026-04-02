@@ -49,3 +49,5 @@ nav:
           - Simulation Cisco Packet Tracer: SP3-MilleNuits/mission2/cisco.md
           - Linux DHCP ISC: SP3-MilleNuits/mission2/isc.md
           - Linux DHCP KEA: SP3-MilleNuits/mission2/kea.md
+      - Mission 3 - NAS:
+          - NAS TrueNAS: SP3-MilleNuits/mission3/nas.md
