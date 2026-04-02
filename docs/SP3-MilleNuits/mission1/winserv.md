@@ -78,16 +78,17 @@ Cette structuration permet une meilleure gestion des utilisateurs, des groupes e
 ## 5. CRÉATION DES UTILISATEURS ET GROUPES
 Afin de respecter l'organisation fonctionnelle du domaine, un groupe de sécurité a été créé pour chaque OU (ex: *Groupe Administratif*, *Groupe Logistique*, etc.). Chaque utilisateur a ensuite été affecté à l'OU et au groupe correspondant à son service.
 
-| Unité d'Organisation | Utilisateur | Identifiant / UPN | Mot de passe |
-| :--- | :--- | :--- | :--- |
-| **Administratif** | a.martin | `MN01\martin` | M@rtin1234 |
-| **Logistique** | c.durand | `MN01\durand` | Dur@nd1234 |
-| **Direction** | l.petit | `l.petit@MN01.lan` | Pet@t1234 |
-| **Vente** | v.leroy | `v.leroy@MN01.lan` | Lero@1234 |
-| **Production** | p.moreau | `p.moreau@MN01.lan` | More@u1234 |
+| Unité d'Organisation | Utilisateur | Identifiant / UPN | Mot de passe | Mot de passe modifier |
+| :------------------- | :---------- | :---------------- | :----------- | --------------------- |
+| **Administratif**    | a.martin    | `MN01\a.martin`   | M@rtin1234   | Mille_Nuits26!        |
+| **Logistique**       | c.durand    | `MN01\c.durand`   | Dur@nd1234   | //                    |
+| **Direction**        | l.petit     | `MN01\l.petit`    | Pet@t1234    | //                    |
+| **Vente**            | v.leroy     | `MN01\v.leroy`    | Lero@1234    | //                    |
+| **Production**       | p.moreau    | `MN01\p.moreau`   | More@u1234   | //                    |
+*Mot de passe modifier, c'est lors de la première connexion il demande de modifier le mot de passe.*
 
 <div class="calc-box">
-ℹ️ <strong>Bénéfice des Groupes de Sécurité :</strong><br>
+<strong>Bénéfice des Groupes de Sécurité :</strong><br>
 L'intégration des utilisateurs dans leurs groupes respectifs permet une gestion optimisée des droits, une administration simplifiée des accès aux ressources (comme les partages fichiers NAS) et une utilisation plus efficace des stratégies de sécurité.
 </div>
 
