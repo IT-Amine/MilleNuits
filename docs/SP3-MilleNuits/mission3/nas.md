@@ -1,4 +1,4 @@
-# 📂 Fiche de Procédure et de Recette : Intégration NAS et Partages Réseau
+# Fiche de Procédure et de Recette : Intégration NAS et Partages Réseau
 
 **Projet :** Mille Nuits
 **Infrastructure :** Windows Server 2019 (MN01) & TrueNAS SCALE (MN03)
@@ -6,7 +6,7 @@
 
 ---
 
-## 🛠️ PARTIE 1 : Fiche de Procédure
+## PARTIE 1 : Fiche de Procédure
 
 ### Phase 1 : Préparation et Jonction au Domaine (Active Directory)
 
@@ -59,7 +59,7 @@
 
 ---
 
-## 🧪 PARTIE 2 : Cahier de Recette (Tests et Validation)
+## PARTIE 2 : Cahier de Recette (Tests et Validation)
 
 | ID Test | Description du Test | Méthode de validation | Résultat Attendu | Statut |
 | :--- | :--- | :--- | :--- | :---: |
