@@ -1,5 +1,6 @@
 site_name: MilleNuits
 site_author: Amine
+site_url: https://it-amine.github.io/MilleNuits/
 
 theme:
   name: material
