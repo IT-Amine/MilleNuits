@@ -46,6 +46,7 @@ nav:
           - Configuration Windows Serveur 2019: SP3-MilleNuits/mission1/winserv.md
           - Mise en place de l'arborescence: SP3-MilleNuits/mission1/annuaire.md
       - Mission 2 - DHCP:
+          - DHCP: SP3-MilleNuits/mission2/dhcp.md
           - Simulation Cisco Packet Tracer: SP3-MilleNuits/mission2/cisco.md
           - Linux DHCP ISC: SP3-MilleNuits/mission2/isc.md
           - Linux DHCP KEA: SP3-MilleNuits/mission2/kea.md
