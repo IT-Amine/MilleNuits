@@ -89,7 +89,7 @@ sudo systemctl restart apache2
 
 Nous créons une base dédiée à l'environnement **Mille Nuits**.
 
-> note "🔐 Identifiants Database" 
+> note " Identifiants Database" 
 > 
 >  **Base :** `db_millenuits_glpi` 
 >  
@@ -188,7 +188,7 @@ sudo systemctl reload apache2
 |**Mot de passe**|`<MOT_DE_PASSE_BDD_GLPI>`|
 
 <div class="calc-box">
-⚠️ <strong>Sécurité Post-Installation </strong><br>
+️ <strong>Sécurité Post-Installation </strong><br>
 Une fois l'installation terminée, il est impératif de supprimer le fichier d'installation pour empêcher une réinitialisation malveillante : 
 
 `sudo rm /var/www/html/glpi/install/install.php`

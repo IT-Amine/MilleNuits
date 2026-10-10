@@ -32,7 +32,7 @@ apt update
 apt install isc-dhcp-server -y
 ```
 
-<div class="calc-box"> ⚠️ <strong>Note de déploiement :</strong>
+<div class="calc-box"> ️ <strong>Note de déploiement :</strong>
 Il est tout à fait normal que le service affiche une erreur (FAILED) juste après l'installation. Le service tente de démarrer alors qu'il n'est pas encore configuré. Cela sera résolu à l'étape 4. </div>
 
 ## 3. DÉCLARATION DE L'INTERFACE D'ÉCOUTE

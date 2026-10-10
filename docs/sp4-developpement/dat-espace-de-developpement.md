@@ -110,11 +110,11 @@ ip access-list extended DMZ
 
 **Synthèse des règles :**
 
-- ✅ DNS autorisé — Les développeurs (`10.10.10.0/24`) peuvent résoudre des noms de domaine internes en interrogeant uniquement le serveur DNS désigné (`172.16.51.1`) en UDP et TCP sur le port `53`. Cela leur permet d'accéder aux services MN21 via leur nom DNS (ex : `gitea.millenuits.lan`) plutôt que par IP.
-- ✅ Réponses TCP établies autorisées — Le mot-clé `established` permet uniquement le retour de connexions TCP initiées par les développeurs (le flag ACK est présent). Aucune connexion ne peut être initiée depuis le SI vers le sous-réseau développeurs.
-- ✅ ICMP echo-reply autorisé — Seules les réponses `ping` (echo-reply) provenant du SI sont autorisées en retour. Les développeurs peuvent donc tester la connectivité vers MN21, mais le SI ne peut pas initier de ping vers leur poste.
-- ❌ Flux IP initiés bloqués — Toute tentative de connexion initiée par un développeur vers `172.16.0.0/16` ou `172.40.0.0/16` (hors DNS et réponses établies) est bloquée. Cela empêche tout accès direct aux serveurs de production ou aux autres VLANs.
-- ❌ Règle de fermeture globale (`deny ip any any`) — Tout flux non explicitement autorisé par les règles précédentes est rejeté. C'est la règle implicite de sécurité par défaut.
+-  DNS autorisé — Les développeurs (`10.10.10.0/24`) peuvent résoudre des noms de domaine internes en interrogeant uniquement le serveur DNS désigné (`172.16.51.1`) en UDP et TCP sur le port `53`. Cela leur permet d'accéder aux services MN21 via leur nom DNS (ex : `gitea.millenuits.lan`) plutôt que par IP.
+-  Réponses TCP établies autorisées — Le mot-clé `established` permet uniquement le retour de connexions TCP initiées par les développeurs (le flag ACK est présent). Aucune connexion ne peut être initiée depuis le SI vers le sous-réseau développeurs.
+-  ICMP echo-reply autorisé — Seules les réponses `ping` (echo-reply) provenant du SI sont autorisées en retour. Les développeurs peuvent donc tester la connectivité vers MN21, mais le SI ne peut pas initier de ping vers leur poste.
+-  Flux IP initiés bloqués — Toute tentative de connexion initiée par un développeur vers `172.16.0.0/16` ou `172.40.0.0/16` (hors DNS et réponses établies) est bloquée. Cela empêche tout accès direct aux serveurs de production ou aux autres VLANs.
+-  Règle de fermeture globale (`deny ip any any`) — Tout flux non explicitement autorisé par les règles précédentes est rejeté. C'est la règle implicite de sécurité par défaut.
 
 ### Sécurité (hardening Docker)
 

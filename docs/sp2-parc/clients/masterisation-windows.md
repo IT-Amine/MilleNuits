@@ -115,10 +115,10 @@ Le poste maître a été enrichi avec la suite logicielle demandée par le servi
 
 | Logiciel | Rôle | État |
 | :--- | :--- | :--- |
-| **Firefox** | Navigateur Web par défaut | ✅ Installé |
-| **LibreOffice** | Suite Bureautique | ✅ Installé |
-| **VLC Media Player** | Lecteur Multimédia | ✅ Installé |
-| **Adobe Acrobat** | Lecteur de fichiers PDF | ✅ Installé |
+| **Firefox** | Navigateur Web par défaut |  Installé |
+| **LibreOffice** | Suite Bureautique |  Installé |
+| **VLC Media Player** | Lecteur Multimédia |  Installé |
+| **Adobe Acrobat** | Lecteur de fichiers PDF |  Installé |
 
 ---
 

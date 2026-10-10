@@ -31,7 +31,7 @@ apt install kea-dhcp4-server -y
 
 Le fichier de configuration principal de Kea se trouve dans `/etc/kea/kea-dhcp4.conf`.
 
-<div class="calc-box"> ⚠️ <strong>Syntaxe JSON stricte :</strong>
+<div class="calc-box"> ️ <strong>Syntaxe JSON stricte :</strong>
 
 Contrairement à l'ancien système, le format JSON ne tolère aucune erreur de syntaxe. Une virgule manquante ou en trop empêchera le service de démarrer. </div>
 

@@ -89,7 +89,7 @@ Commentaire :
 
 - Commande : `ping <adresse_ip_exterieure>`
 - Exemple : `ping 9.9.9.9`
-         ⚠️ En cas de problème lors du ping, utilisez `traceroute` pour voir le chemin emprunté par le paquet et déterminer l'élément défectueux.
+         ️ En cas de problème lors du ping, utilisez `traceroute` pour voir le chemin emprunté par le paquet et déterminer l'élément défectueux.
 
 2. **Couche Applicative (L7) :**
 

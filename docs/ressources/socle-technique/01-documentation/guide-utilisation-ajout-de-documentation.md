@@ -110,7 +110,7 @@ git status
 
 2. **Comprendre et corriger le conflit.** Ouvrez le fichier en conflit dans votre éditeur. Vous y verrez des balises insérées par Git :
 
- **⚠️ Règle de sécurité** : Ne supprimez jamais le code de l'autre sans concertation.
+ **️ Règle de sécurité** : Ne supprimez jamais le code de l'autre sans concertation.
 
 *Éditez le fichier manuellement pour conserver la version finale souhaitée, puis supprimez les balises `<<<<<<<`, `=======` et `>>>>>>>`.*
 

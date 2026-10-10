@@ -32,7 +32,7 @@ Le serveur a été renommé et configuré de manière statique afin d'être iden
 Dans le cadre du durcissement du serveur, les mots de passe par défaut ont été modifiés. Ce compte Administrateur permet la gestion complète du serveur et de la forêt Active Directory.
 
 <div class="calc-box">
-🔐 <strong>Politique de mots de passe :</strong>
+ <strong>Politique de mots de passe :</strong>
 <ul>
 <br>
 <li><strong>Compte Administrateur :</strong> L'ancien mot de passe (<code><ANCIEN_MOT_DE_PASSE></code>) a été remplacé par <code><MOT_DE_PASSE_ADMIN_AD></code>.</li>
@@ -72,15 +72,15 @@ Une fois le rôle installé, le serveur a été promu pour créer le nouveau dom
 ### 4.3. Structuration de l'annuaire
 Afin d'organiser logiquement les objets de l'entreprise, des Unités d'Organisation (OU) ont été créées à la racine du domaine :
 
-* 📁 Administratif
+*  Administratif
 
-* 📁 Direction
+*  Direction
 
-* 📁 Logistique
+*  Logistique
 
-* 📁 Production
+*  Production
 
-* 📁 Vente
+*  Vente
 
 Cette structuration permet une meilleure gestion des utilisateurs, des groupes et la future application de stratégies de groupe (GPO).
 

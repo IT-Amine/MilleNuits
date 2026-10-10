@@ -85,7 +85,7 @@ Une fois l'utilisateur créé, la fiche détaillée s'affiche :
 3. Cliquer sur **Ajouter** pour lier le profil à l'utilisateur.
 
 <div class="calc-box">
-⚠️ <strong>Attention :</strong><br>
+️ <strong>Attention :</strong><br>
 Par défaut, GLPI peut attribuer automatiquement le profil "Self-Service" lors de la création d'un compte. Il est impératif de vérifier et de purger les habilitations incorrectes dans ce même onglet.
 </div>
 

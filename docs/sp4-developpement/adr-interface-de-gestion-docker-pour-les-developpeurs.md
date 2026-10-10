@@ -48,11 +48,11 @@ Trois approches ont été étudiées pour répondre aux besoins des développeur
 
 | Critères / Besoins | Portainer | Accès CLI (SSH) | Yacht |
 | :--- | :---: | :---: | :---: |
-| Déploiement via Docker Compose | ✅ Oui | ✅ Oui | ⚠️ Limité |
-| Gestion des volumes persistants | ✅ Oui | ✅ Oui | ✅ Oui |
-| Hébergement Stack (PHP, DB, JS) | ✅ Oui | ✅ Oui | ✅ Oui |
-| **Sécurité : Aucun accès Shell hôte** | ✅ **Oui** | ❌ **Non** | ✅ **Oui** |
-| Facilité d'utilisation (Interface Web) | ✅ Oui | ❌ Non | ✅ Oui |
+| Déploiement via Docker Compose |  Oui |  Oui | ️ Limité |
+| Gestion des volumes persistants |  Oui |  Oui |  Oui |
+| Hébergement Stack (PHP, DB, JS) |  Oui |  Oui |  Oui |
+| **Sécurité : Aucun accès Shell hôte** |  **Oui** |  **Non** |  **Oui** |
+| Facilité d'utilisation (Interface Web) |  Oui |  Non |  Oui |
 
 ### Analyse des avantages et inconvénients
 

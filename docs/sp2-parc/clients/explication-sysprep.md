@@ -104,7 +104,7 @@ Une fenêtre s'ouvre. Il faut impérativement choisir les options suivantes :
 
 ---
 
-## ⚠️ Avertissement Important
+## ️ Avertissement Important
 
 **UNE FOIS LA VM ÉTEINTE APRÈS LE SYSPREP, NE LA RALLUMEZ SURTOUT PAS !**
 

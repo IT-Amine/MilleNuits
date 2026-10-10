@@ -1,4 +1,4 @@
-# 📂 PROJET MILLE NUITS - SP3
+# PROJET MILLE NUITS - SP3
 
 <div style="margin-top: 20px; border: 1px solid #ccc; padding: 20px; border-radius: 10px; background-color: var(--md-default-bg-color);">
     <p><strong>Auteur :</strong> KADA Amine</p>
@@ -27,23 +27,23 @@ Suite à la promotion du serveur **MN01** (IP: `172.16.52.1`) en tant que contr�
 Afin d'isoler les objets de l'entreprise des conteneurs par défaut de Windows, une UO racine `MilleNuits` a été créée.
 
 ```text
-📁 MN01.lan (Domaine Racine)
-└── 📁 MilleNuits (UO Racine de l'entreprise)
-    ├── 📁 Administratif (UO)
-    │   ├── 👥 Groupe_Administratif (Groupe de sécurité)
-    │   └── 👤 2 Utilisateurs (membres du groupe)
-    ├── 📁 Direction (UO)
-    │   ├── 👥 Groupe_Direction (Groupe de sécurité)
-    │   └── 👤 2 Utilisateurs (membres du groupe)
-    ├── 📁 Logistique (UO)
-    │   ├── 👥 Groupe_Logistique (Groupe de sécurité)
-    │   └── 👤 2 Utilisateurs (membres du groupe)
-    ├── 📁 Production (UO)
-    │   ├── 👥 Groupe_Production (Groupe de sécurité)
-    │   └── 👤 2 Utilisateurs (membres du groupe)
-    └── 📁 Ventes (UO)
-        ├── 👥 Groupe_Ventes (Groupe de sécurité)
-        └── 👤 2 Utilisateurs (membres du groupe)
+ MN01.lan (Domaine Racine)
+└──  MilleNuits (UO Racine de l'entreprise)
+    ├──  Administratif (UO)
+    │   ├──  Groupe_Administratif (Groupe de sécurité)
+    │   └──  2 Utilisateurs (membres du groupe)
+    ├──  Direction (UO)
+    │   ├──  Groupe_Direction (Groupe de sécurité)
+    │   └──  2 Utilisateurs (membres du groupe)
+    ├──  Logistique (UO)
+    │   ├──  Groupe_Logistique (Groupe de sécurité)
+    │   └──  2 Utilisateurs (membres du groupe)
+    ├──  Production (UO)
+    │   ├──  Groupe_Production (Groupe de sécurité)
+    │   └──  2 Utilisateurs (membres du groupe)
+    └──  Ventes (UO)
+        ├──  Groupe_Ventes (Groupe de sécurité)
+        └──  2 Utilisateurs (membres du groupe)
 ```
 
 ## 3. SCRIPT DE DÉPLOIEMENT AUTOMATISÉ (POWERSHELL)

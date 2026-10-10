@@ -87,4 +87,4 @@
     **Explications :**
     `reload` : Déclenche la séquence de redémarrage du système d'exploitation (Cisco IOS).
 
-    **⚠️ Attention :** Si le routeur propose de sauvegarder la configuration modifiée (*"System configuration has been modified. Save?"*), il faut impérativement répondre **`no`**.
+    **️ Attention :** Si le routeur propose de sauvegarder la configuration modifiée (*"System configuration has been modified. Save?"*), il faut impérativement répondre **`no`**.

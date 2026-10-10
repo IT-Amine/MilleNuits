@@ -74,7 +74,7 @@ Cette procédure permet de sauvegarder de manière fiable la configuration activ
 
 ### 1. Cas d'un Routeur (ex: `rt_millenuits-01`)
 
-> 💡 Le routeur ne gère pas de base VLAN locale (pas de `vlan.dat`), seule la configuration courante est nécessaire.
+>  Le routeur ne gère pas de base VLAN locale (pas de `vlan.dat`), seule la configuration courante est nécessaire.
 
 1. **Connexion et privilèges**
     ```CISCO

@@ -78,7 +78,7 @@
 
     `reload` : Lance le processus de redémarrage de l'IOS Cisco. 
 
-    **⚠️ Attention :** Si le switch vous demande de sauvegarder la configuration actuelle avant de redémarrer (*"System configuration has been modified. Save?"*), vous devez absolument taper **`no`**, sinon vous annulerez tout le travail de réinitialisation.
+    **️ Attention :** Si le switch vous demande de sauvegarder la configuration actuelle avant de redémarrer (*"System configuration has been modified. Save?"*), vous devez absolument taper **`no`**, sinon vous annulerez tout le travail de réinitialisation.
 
 ---
 ## Annexe

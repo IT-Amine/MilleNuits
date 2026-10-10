@@ -29,7 +29,7 @@ L'exécution de la commande `ipconfig /all` sur le poste client a retourné les 
 * **Serveur DNS distribué :** `172.16.52.1` (Correspond au futur serveur Windows MN01)
 ![Image DHCP Linux](../../img/cmd.png)
 <div class="calc-box">
-✅ <strong>Conclusion de l'analyse :</strong><br>
+ <strong>Conclusion de l'analyse :</strong><br>
 L'agent de relais (`ip helper-address`) configuré sur le routeur Cisco est 100% fonctionnel. Les trames DHCP Discover traversent correctement le réseau depuis le VLAN 40 jusqu'au VLAN 52, et le serveur Debian attribue les bons baux correspondants aux sous-réseaux.
 </div>
 

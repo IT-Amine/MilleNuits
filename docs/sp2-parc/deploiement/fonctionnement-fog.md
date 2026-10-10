@@ -77,7 +77,7 @@ FOG ne fonctionne pas seul, il s'appuie sur plusieurs services réseaux standard
 
 ---
 
-## 3. Le Cycle de Vie : Sysprep ➔ FOG ➔ Déploiement
+## 3. Le Cycle de Vie : Sysprep  FOG  Déploiement
 
 C'est ici que tout se joue. Voici la chronologie exacte des opérations pour réussir la Mission 3.
 
@@ -90,7 +90,7 @@ C'est ici que tout se joue. Voici la chronologie exacte des opérations pour ré
 1.  On déclare l'adresse MAC de la VM Master dans l'interface Web de FOG.
 2.  On programme une tâche de **"Capture"**.
 3.  On allume la VM Master en **Boot Réseau (PXE)**.
-    * ⚠️ *Important :* Elle ne doit pas redémarrer sur son disque dur. Si cela se produit, Windows lancera la phase OOBE (spécialisation de l'OS) et générera un nouveau SID, rendant l'image inutilisable pour un déploiement générique. Il faut impérativement démarrer sur la carte réseau (PXE).
+    * ️ *Important :* Elle ne doit pas redémarrer sur son disque dur. Si cela se produit, Windows lancera la phase OOBE (spécialisation de l'OS) et générera un nouveau SID, rendant l'image inutilisable pour un déploiement générique. Il faut impérativement démarrer sur la carte réseau (PXE).
 4.  FOG prend le relais, lit le disque dur "sysprepé", le compresse et l'envoie sur le serveur MN08.
 
 ### Phase C : Le Déploiement (Côté Clients)

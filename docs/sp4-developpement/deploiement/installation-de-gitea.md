@@ -39,7 +39,7 @@ Avant l'instanciation des services, la gestion des secrets doit être rigoureuse
 
 2.  **Préparation du fichier de déploiement.** Utiliser le fichier de configuration ci-dessous pour configurer Gitea sur le serveur de pré-production (MN21).
 
-    👉 [Docker compose - Gitea](./docker-compose_gitea.txt)
+     [Docker compose - Gitea](./docker-compose_gitea.txt)
 
 3.  **Injection des variables d'environnement dans Portainer.** Pour des raisons de sécurité, les secrets ne sont pas stockés en clair dans le code. Ils doivent être transmis dynamiquement lors de la création de la *Stack* dans Portainer.
 

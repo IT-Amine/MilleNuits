@@ -72,8 +72,8 @@
 
 | ID Test | Description du Test | Méthode de validation | Résultat Attendu | Statut |
 | :--- | :--- | :--- | :--- | :---: |
-| **TEST-01** | Jonction du NAS au domaine | Sur TrueNAS, vérifier *Credentials > Local Users*. Filtrer par *Active Directory Users*. | Les utilisateurs et groupes de l'AD (`MN010\admins du domaine`) apparaissent dans la liste TrueNAS. | ✅ OK |
-| **TEST-02** | Accès global au partage réseau | Depuis un PC client, taper `\\172.16.52.3` dans l'explorateur. | Le dossier racine partagé est visible et accessible sans erreur réseau. | ✅ OK |
-| **TEST-03** | Application des droits NTFS (Cas Passant) | Connecter l'utilisateur "martin" (Service Ventes). Tenter d'ouvrir et de modifier un fichier dans le dossier `Ventes`. | L'utilisateur accède au dossier, peut créer et supprimer un fichier. | ✅ OK |
-| **TEST-04** | Application des droits NTFS (Cas Non-Passant) | Avec le même utilisateur ("martin"), tenter d'ouvrir le dossier `Direction` ou `Administratif`. | Un message d'erreur s'affiche : *"Vous n'avez pas l'autorisation d'accéder à ce dossier"*. Accès refusé. | ✅ OK |
-| **TEST-05** | Application de la GPO (Mappage du lecteur) | Ouvrir une session sur un poste client Windows du domaine. Ouvrir "Ce PC". | Le lecteur réseau (ex: `Z:`) apparaît automatiquement, pointant vers le NAS. | ✅ OK |
+| **TEST-01** | Jonction du NAS au domaine | Sur TrueNAS, vérifier *Credentials > Local Users*. Filtrer par *Active Directory Users*. | Les utilisateurs et groupes de l'AD (`MN010\admins du domaine`) apparaissent dans la liste TrueNAS. |  OK |
+| **TEST-02** | Accès global au partage réseau | Depuis un PC client, taper `\\172.16.52.3` dans l'explorateur. | Le dossier racine partagé est visible et accessible sans erreur réseau. |  OK |
+| **TEST-03** | Application des droits NTFS (Cas Passant) | Connecter l'utilisateur "martin" (Service Ventes). Tenter d'ouvrir et de modifier un fichier dans le dossier `Ventes`. | L'utilisateur accède au dossier, peut créer et supprimer un fichier. |  OK |
+| **TEST-04** | Application des droits NTFS (Cas Non-Passant) | Avec le même utilisateur ("martin"), tenter d'ouvrir le dossier `Direction` ou `Administratif`. | Un message d'erreur s'affiche : *"Vous n'avez pas l'autorisation d'accéder à ce dossier"*. Accès refusé. |  OK |
+| **TEST-05** | Application de la GPO (Mappage du lecteur) | Ouvrir une session sur un poste client Windows du domaine. Ouvrir "Ce PC". | Le lecteur réseau (ex: `Z:`) apparaît automatiquement, pointant vers le NAS. |  OK |
