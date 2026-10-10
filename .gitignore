@@ -1,3 +1,31 @@
-site/
+# macOS
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# Zensical build output
+site/
+.cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.env
+pip-log.txt
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+memo.md
 templates/*
