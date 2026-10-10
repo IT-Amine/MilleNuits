@@ -1,7 +1,7 @@
 # 📂 PROJET MILLE NUITS - SP3
 
 <div style="margin-top: 20px; border: 1px solid #ccc; padding: 20px; border-radius: 10px; background-color: var(--md-default-bg-color);">
-    <p><strong>Auteur :</strong> Amine & Lucka</p>
+    <p><strong>Auteur :</strong> KADA Amine</p>
     <p><strong>Classe :</strong> BTS SIO 2 - Option SISR</p>
     <p><strong>Date :</strong> 10/10/2026</p>
     <p><strong>Version :</strong> 1.0</p>
@@ -55,7 +55,7 @@ PowerShell
 ```
 # 1. Définition des variables de base
 $domain = "DC=MN01,DC=lan"
-$pwd = ConvertTo-SecureString "MilleNuits2026!" -AsPlainText -Force
+$pwd = ConvertTo-SecureString "<MOT_DE_PASSE_SECURISE>" -AsPlainText -Force
 
 # 2. Création de l'UO Racine globale
 New-ADOrganizationalUnit -Name "MilleNuits" -Path $domain

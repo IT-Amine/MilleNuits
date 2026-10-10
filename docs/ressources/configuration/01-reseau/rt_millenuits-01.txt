@@ -1,0 +1,213 @@
+! Current configuration : 3147 bytes
+!
+! Last configuration change at 14:57:57 UTC Thu Mar 19 2026 by amine
+! NVRAM config last updated at 14:57:58 UTC Thu Mar 19 2026 by amine
+! NVRAM config last updated at 14:57:58 UTC Thu Mar 19 2026 by amine
+version 15.1
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname rt_millenuits_coeur-01
+!
+boot-start-marker
+boot-end-marker
+!
+!
+!
+no aaa new-model
+!
+no ipv6 cef
+ip source-route
+ip cef
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name millenuits.lab
+multilink bundle-name authenticated
+!
+crypto pki token default removal timeout 0
+!
+!
+license udi pid CISCO1921/K9 sn FGL163021WM
+!
+!
+username amine privilege 15 secret 4 MOT-DE-PASSE
+username amine privilege 15 secret 4 MOT-DE-PASSE
+!
+ip ssh version 2
+crypto key generate rsa modulus 2048
+!
+!
+!
+!
+interface Embedded-Service-Engine0/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ ip nat inside
+ no shutdown
+!         
+interface GigabitEthernet0/1.10
+ description VLAN Production
+ encapsulation dot1Q 10
+ ip address 172.40.0.254 255.255.255.0
+ ip helper-address 172.16.51.11
+ ip nat inside
+ ip virtual-reassembly in
+!
+interface GigabitEthernet0/1.11
+ description VLAN Autres
+ encapsulation dot1Q 11
+ ip address 172.40.1.126 255.255.255.128
+ ip helper-address 172.16.51.11
+ ip nat inside
+ ip virtual-reassembly in
+!
+interface GigabitEthernet0/1.12
+ description VLAN Administratif
+ encapsulation dot1Q 12
+ ip address 172.40.1.254 255.255.255.128
+ ip helper-address 172.16.51.11
+ ip nat inside
+ ip virtual-reassembly in
+!
+interface GigabitEthernet0/1.13
+ description VLAN VentesEtudes
+ encapsulation dot1Q 13
+ ip address 172.40.2.62 255.255.255.192
+ ip helper-address 172.16.51.11
+ ip nat inside
+ ip virtual-reassembly in
+!
+interface GigabitEthernet0/1.14
+ description VLAN Logistique
+ encapsulation dot1Q 14
+ ip address 172.40.2.126 255.255.255.192
+ ip helper-address 172.16.51.11
+ ip nat inside
+!
+interface GigabitEthernet0/1.15
+ description VLAN Invite
+ encapsulation dot1Q 15
+ ip address 172.40.2.142 255.255.255.240
+ ip helper-address 172.16.51.11
+ ip nat inside
+ ip virtual-reassembly in
+!
+interface GigabitEthernet0/1.16
+ description VLAN Developpeur
+ encapsulation dot1Q 16
+ ip address 172.40.2.174 255.255.255.240
+ ip helper-address 172.16.51.11
+ ip nat inside
+ ip access-group Filtrage_Dev in
+ ip virtual-reassembly in
+!
+interface GigabitEthernet0/1.51
+ description VLAN Serveurs
+ encapsulation dot1Q 51
+ ip address 172.16.51.252 255.255.255.0
+ ip nat inside
+ ip virtual-reassembly in
+!
+interface GigabitEthernet0/1.53
+ description VLAN DMZ prive
+ encapsulation dot1Q 53
+ ip address 10.10.10.254 255.255.255.0
+ ip access-group DMZ in
+ ip virtual-reassembly in
+!         
+interface GigabitEthernet0/1.99
+ description VLAN Management
+ encapsulation dot1Q 99
+ ip address 172.40.2.158 255.255.255.240
+!
+interface GigabitEthernet0/0
+ ip address 172.16.29.11 255.255.252.0
+ ip nat outside
+ ip virtual-reassembly in
+ duplex auto
+ speed auto
+ no shutdown
+!
+interface Serial0/0/0
+ no ip address
+ no shutdown
+ clock rate 2000000
+!
+ip forward-protocol nd
+!
+no ip http server
+no ip http secure-server
+!
+ip nat inside source list NAT interface GigabitEthernet0/0 overload
+ip route 0.0.0.0 0.0.0.0 172.16.31.254
+!
+ip access-list extended DMZ
+ remark Autorisation requetes DNS vers serveur interne
+ permit udp 10.10.10.0 0.0.0.255 host 172.16.51.1 eq 53
+ permit tcp 10.10.10.0 0.0.0.255 host 172.16.51.1 eq 53
+ remark Autorisation des reponses
+ permit tcp 10.10.10.0 0.0.0.255 172.16.0.0 0.0.255.255 established
+ permit tcp 10.10.10.0 0.0.0.255 172.40.0.0 0.0.255.255 established
+ permit icmp 10.10.10.0 0.0.0.255 172.16.0.0 0.0.255.255 echo-reply
+ permit icmp 10.10.10.0 0.0.0.255 172.40.0.0 0.0.255.255 echo-reply
+ remark Interdiction acces autres vlan
+ deny ip 10.10.10.0 0.0.0.255 172.16.0.0 0.0.255.255
+ deny ip 10.10.10.0 0.0.0.255 172.40.0.0 0.0.255.255
+ remark Interdiction globale
+ deny ip any any
+ip access-list extended DMZ-PING
+ remark Autorisation des reponses
+ permit tcp 10.10.10.0 0.0.0.255 172.16.0.0 0.0.255.255 established
+ permit tcp 10.10.10.0 0.0.0.255 172.40.0.0 0.0.255.255 established
+ permit icmp 10.10.10.0 0.0.0.255 172.16.0.0 0.0.255.255 echo-reply
+ permit icmp 10.10.10.0 0.0.0.255 172.40.0.0 0.0.255.255 echo-reply
+ remark Interdiction acces autres vlan
+ deny ip 10.10.10.0 0.0.0.255 172.16.0.0 0.0.255.255
+ deny ip 10.10.10.0 0.0.0.255 172.40.0.0 0.0.255.255
+ remark Autorisation ping passerelle
+ permit icmp 10.10.10.0 0.0.0.255 10.10.10.0 0.0.0.255
+ remark Interdiction globale
+ deny ip any any
+ip access-list extended Filtrage_Dev
+ permit ip 172.40.2.160 0.0.0.15 10.10.10.0 0.0.0.255
+ permit ip 10.10.10.0 0.0.0.255 172.40.2.160 0.0.0.15
+ deny ip 172.40.2.160 0.0.0.15 172.40.0.0 0.0.255.255
+ip access-list standard NAT
+ remark Utilisateurs
+ permit 172.40.0.0 0.0.255.255
+ remark Serveurs
+ permit 172.16.51.0 0.0.0.255
+!
+!
+!
+control-plane
+!
+!
+!
+line con 0
+ password 7 <MOT_DE_PASSE_CHIFFRE>
+ login
+line aux 0
+line 2
+ no activation-character
+ no exec
+ transport preferred none
+ transport input all
+ transport output pad telnet rlogin lapb-ta mop udptn v120 ssh
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+scheduler allocate 20000 1000
+end

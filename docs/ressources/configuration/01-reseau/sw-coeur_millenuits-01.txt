@@ -1,0 +1,208 @@
+! Current configuration : 4698 bytes
+!
+version 12.2
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname sw-millenuits_coeur-01
+!
+boot-start-marker
+boot-end-marker
+!
+!
+username amine privilege 15 secret 5 MOT-DE-PASSE
+username amine privilege 15 secret 5 MOT-DE-PASSE
+no aaa new-model
+system mtu routing 1500
+ip subnet-zero
+!
+!
+no ip domain lookup
+ip domain-name millenuits.lan
+!
+!         
+crypto pki trustpoint TP-self-signed-405997952
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-405997952
+ revocation-check none
+ rsakeypair TP-self-signed-405997952
+!
+ip ssh version 2
+!
+crypto key generate rsa general-keys modulus 2048
+!
+crypto pki certificate chain TP-self-signed-405997952
+ certificate self-signed 01
+  30820242 308201AB A0030201 02020101 300D0609 2A864886 F70D0101 04050030 
+  30312E30 2C060355 04031325 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 34303539 39373935 32301E17 0D393330 33303130 30303635 
+  355A170D 32303031 30313030 30303030 5A303031 2E302C06 03550403 1325494F 
+  532D5365 6C662D53 69676E65 642D4365 72746966 69636174 652D3430 35393937 
+  39353230 819F300D 06092A86 4886F70D 01010105 0003818D 00308189 02818100 
+  A3A6A413 04F2BA8C 4720865E D488C25A 124E9B66 9A305177 334A1FA7 9BA927D5 
+  4BB0C363 74F163BC 17F7FEE3 449C4380 D86F2A34 9DA1B78C 6FDC1E7D 35FD6E51 
+  9456340F 061D27F8 D2430A83 934BD9E6 89E50772 B60BC24E 60CBB0F5 5057989C 
+  C3FE2F12 0C3009B7 46D50676 19CA67A7 2A76E077 A806863D EB6DF1C3 D2A848CB 
+  02030100 01A36C30 6A300F06 03551D13 0101FF04 05300301 01FF3017 0603551D 
+  11041030 0E820C73 775F636F 6575722D 30312E30 1F060355 1D230418 30168014 
+  9532EDB3 4673A7E5 1211CFAD D3BC4FB2 D00B46B5 301D0603 551D0E04 16041495 
+  32EDB346 73A7E512 11CFADD3 BC4FB2D0 0B46B530 0D06092A 864886F7 0D010104 
+  05000381 810077ED C0D26132 8E180B36 F0A68A32 F9CFD257 7D6FDD18 7B33D9A6 
+  80044919 7E99D645 A1D8E7AF 9150E3FC C3088043 CC28A9A9 51094314 E4385283 
+  4E32A29B 5F3C4D6E CDE76DA1 B492BA35 2C7FAA3A 8A668F68 861B19D5 5FFE231B 
+  038366B2 F638B052 1B3358D5 F3FB177C 1150CFC9 65F69153 F279E796 027773BF 
+  34F4C227 04DC
+  quit
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+!
+interface FastEthernet0/1
+ description VLAN 10 Production
+ switchport access vlan 10
+ switchport mode access
+!         
+interface FastEthernet0/2
+ description VLAN 10 Production
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/3
+ description VLAN 11 Autres
+ switchport access vlan 11
+ switchport mode access
+!
+interface FastEthernet0/4
+ description VLAN 11 Autres
+ switchport access vlan 11
+ switchport mode access
+!
+interface FastEthernet0/5
+ description VLAN 12 Administratif
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/6
+ description VLAN 12 Administratif
+ switchport access vlan 12
+ switchport mode access
+!
+interface FastEthernet0/7
+ description VLAN 13 VentesEtudes
+ switchport access vlan 13
+ switchport mode access
+!
+interface FastEthernet0/8
+ description VLAN 13 VentesEtudes
+ switchport access vlan 13
+ switchport mode access
+!
+interface FastEthernet0/9
+ description VLAN 14 Logistique
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/10
+ description VLAN 14 Logistique
+ switchport access vlan 14
+ switchport mode access
+!
+interface FastEthernet0/11
+ description VLAN 15 Invite
+ switchport access vlan 15
+ switchport mode access
+!
+interface FastEthernet0/12
+ description VLAN 15 Invite
+ switchport access vlan 15
+ switchport mode access
+!
+interface FastEthernet0/13
+ description VLAN 51 Serveurs
+ switchport access vlan 51
+ switchport mode access
+!
+interface FastEthernet0/14
+ description VLAN 51 Serveurs
+ switchport access vlan 51
+ switchport mode access
+!
+interface FastEthernet0/15
+ description VLAN 53 DMZ
+ switchport access vlan 53
+ switchport mode access
+!
+interface FastEthernet0/16
+ description VLAN 53 DMZ
+ switchport access vlan 53
+ switchport mode access
+!
+interface FastEthernet0/17
+description VLAN 16 Développeur
+switchport access vlan 16
+switchport mode access
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+ description VLAN Management
+ switchport access vlan 99
+ switchport mode access
+!
+interface FastEthernet0/24
+ description VLAN Management
+ switchport access vlan 99
+ switchport mode access
+!
+interface GigabitEthernet0/1
+ description TRUNK rt_millenuits01
+ switchport trunk allowed vlan 10-15,51,53,99
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ description TRUNK rt_millenuits01
+ switchport trunk allowed vlan 10-15,51,53,99
+ switchport mode trunk
+!
+interface Vlan1
+ no ip address
+ no ip route-cache
+!
+interface Vlan99
+ ip address 172.40.2.157 255.255.255.240
+ no ip route-cache
+!
+ip http server
+ip http secure-server
+!
+control-plane
+!
+!         
+line con 0
+ password 7 <MOT_DE_PASSE_CHIFFRE>
+ login
+line vty 0 4
+ login local
+ transport input ssh
+line vty 5 15
+ login
+ transport input ssh
+!
+end

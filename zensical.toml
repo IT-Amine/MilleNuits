@@ -2,10 +2,16 @@
 site_url = "https://it-amine.github.io/MilleNuits"
 site_name = "Mille Nuits Documentation"
 site_description = "Documentation de l'infrastructure Mille Nuits du BTS SIO."
-site_author = "Amine & Lucka"
+site_author = "KADA Amine"
 
 nav = [
   { "Accueil" = ["index.md"] },
+    { "SP1 - Infrastructure" = [
+    "sp1-infrastructure/mise-en-place-du-protypage.md",
+    "sp1-infrastructure/mise-en-place-du-ssh-sur-les-elements-dinter-connexion.md",
+    "sp1-infrastructure/sauvegarde-via-tftp-des-equipements-reseau.md",
+    "sp1-infrastructure/recette-infrastructure-reseau.md"
+  ]},
   { "SP2 - Gestion du Parc" = [
     { "Documentation" = [
       "sp2-parc/documentation/comparatif-editeurs.md",
@@ -41,10 +47,47 @@ nav = [
     { "Stockage" = [
       "sp3-services/stockage/installation-nas-truenas.md"
     ]}
+  ]},
+  { "SP4 - Espace Dev" = [
+    { "Architecture" = [
+      "sp4-developpement/adr-interface-de-gestion-docker-pour-les-developpeurs.md",
+      "sp4-developpement/dat-espace-de-developpement.md"
+    ]},
+    { "Déploiement" = [
+      "sp4-developpement/deploiement/installation-docker-sur-mn21.md",
+      "sp4-developpement/deploiement/configuration-de-docker-sur-mn21.md",
+      "sp4-developpement/deploiement/installation-de-portainer.md",
+      "sp4-developpement/deploiement/configuration-portainer-sur-mn21.md",
+      "sp4-developpement/deploiement/installation-de-gitea.md",
+      "sp4-developpement/deploiement/recette-espace-developpement.md"
+    ]},
+    { "Runbooks" = [
+      "sp4-developpement/runbooks/formation-docker.md",
+      "sp4-developpement/runbooks/guide-utilisateur-ajout-des-images-docker.md",
+      "sp4-developpement/runbooks/guide-utilisateur-utiliser-portainer.md",
+      "sp4-developpement/runbooks/guide-utilisateur-mise-en-place-environnement-developpement-web-db-sur-portainer.md"
+    ]},
+    { "Wi-Fi" = [
+      "sp4-developpement/documentation-de-la-borne-wifi.md",
+      "sp4-developpement/creation-dun-sous-reseau-developpeur-avec-wi-fi-securiser.md",
+      "sp4-developpement/fiche-test-du-point-dacces.md"
+    ]}
+  ]},
+  { "Ressources" = [
+    { "Tableaux" = [
+      "ressources/tableaux/plan-dadressage-millenuits-gp1.md",
+      "ressources/tableaux/table-de-routage-millenuits-gp1.md",
+      "ressources/tableaux/matrice-des-flux-millenuits-gp1.md"
+    ]},
+    { "Configurations" = [
+      "ressources/configuration/repertoire.md",
+      "ressources/configuration/00-procedures/reinitialisation-de-la-configuration-du-switch.md",
+      "ressources/configuration/00-procedures/reinitialisation-de-la-configuration-du-routeur.md"
+    ]}
   ]}
 ]
 
-copyright = "Copyright &copy; 2026 Amine & Lucka"
+copyright = "Copyright &copy; 2026 KADA Amine"
 repo_url = "https://github.com/IT-Amine/MilleNuits"
 repo_name = "IT-Amine/MilleNuits"
 edit_uri = "edit/main/docs/"

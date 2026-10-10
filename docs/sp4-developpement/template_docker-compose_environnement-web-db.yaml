@@ -1,0 +1,64 @@
+# *****************************************************************************
+# Nom         : Template environnement Web + DB
+# Mainteneur  : KADA Amine
+# Date        : 2026-04-09
+# Composants  : Serveur Web (Apache + PHP 8.2) & Base de données (MariaDB 10.11)
+# ******************************************************************************
+
+services:
+  # 1. Conteneur d'initialisation (Récupération du code)
+  init-code:
+    image: alpine:latest
+    # Changer le chemin du dépôt Git et les commandes d'initialisation selon vos besoins
+    command: >
+      sh -c "apk add --no-cache git 
+      && git clone http://gitea.millenuits.lan/slam/projet.git /tmp/repo 
+      && rm -rf /app/web/* && rm -rf /app/sql/*
+      && cp -r /tmp/repo/src/* /app/web/ 
+      && cp /tmp/repo/sql/*.sql /app/sql/ 
+      && chown -R 33:33 /app/web"
+    volumes:
+      - web_data:/app/web
+      - db_init:/app/sql
+
+  # 2. Serveur Web (Éxecution du code PHP)
+  web:
+    image: php:8.2-apache
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - web_data:/var/www/html
+    environment:
+      - DB_HOST=db
+      - DB_USER=${DB_USER:-user_etudiant}
+      - DB_PASSWORD=${DB_PASSWORD:-<MOT_DE_PASSE_ETUDIANT>}
+      - DB_NAME=${DB_NAME:-db_etudiant}
+    depends_on:
+      init-code:
+        condition: service_completed_successfully
+      db:
+        condition: service_healthy
+
+  # 3. Base de données
+  db:
+    image: mariadb:10.11
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-<MOT_DE_PASSE_ROOT_MYSQL>}
+      MYSQL_DATABASE: ${DB_NAME:-db_etudiant}
+      MYSQL_USER: ${DB_USER:-user_etudiant}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-<MOT_DE_PASSE_ETUDIANT>}
+    volumes:
+      - db_data:/var/lib/mysql
+      - db_init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  web_data:
+  db_data:
+  db_init:

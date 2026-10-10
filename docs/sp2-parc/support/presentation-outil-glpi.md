@@ -42,7 +42,7 @@ tr:nth-child(even) { background-color: #f9fafb; }
 # Installation de GLPI (Service Desk)
 
 <div style="margin-top: 20px; border: 1px solid #ccc; padding: 20px; border-radius: 10px; background-color: var(--md-default-bg-color);">
-    <p><strong>Auteur :</strong> Amine & Lucka</p>
+    <p><strong>Auteur :</strong> KADA Amine</p>
     <p><strong>Classe :</strong> BTS SIO 2 - Option SISR</p>
     <p><strong>Date :</strong> 10/10/2026</p>
     <p><strong>Version :</strong> 1.0</p>
@@ -95,7 +95,7 @@ Nous créons une base dédiée à l'environnement **Mille Nuits**.
 >  
 >  **Utilisateur :** `admin_millenuits` 
 >  
-> **Mot de passe :**`M1lleNuits_Secret!2026`
+> **Mot de passe :**`<MOT_DE_PASSE_BDD_GLPI>`
 
 **Procédure SQL :**
 
@@ -109,7 +109,7 @@ sudo mysql -u root
 CREATE DATABASE db_millenuits_glpi CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- Création de l'utilisateur
-CREATE USER 'admin_millenuits'@'localhost' IDENTIFIED BY 'M1lleNuits_Secret!2026';
+CREATE USER 'admin_millenuits'@'localhost' IDENTIFIED BY '<MOT_DE_PASSE_BDD_GLPI>';
 
 -- Attribution des droits
 GRANT ALL PRIVILEGES ON db_millenuits_glpi.* TO 'admin_millenuits'@'localhost';
@@ -126,7 +126,7 @@ Nous installons la version stable **10.0.12** dans le dossier web.
 ```
 cd /tmp
 # Téléchargement
-wget [https://github.com/glpi-project/glpi/releases/download/10.0.12/glpi-10.0.12.tgz](https://github.com/glpi-project/glpi/releases/download/10.0.12/glpi-10.0.12.tgz)
+wget https://github.com/glpi-project/glpi/releases/download/10.0.12/glpi-10.0.12.tgz
 
 # Extraction et déplacement
 tar -xzvf glpi-10.0.12.tgz
@@ -185,7 +185,7 @@ sudo systemctl reload apache2
 |---|---|
 |**Serveur SQL**|`localhost`|
 |**Utilisateur**|`admin_millenuits`|
-|**Mot de passe**|`M1lleNuits_Secret!2026`|
+|**Mot de passe**|`<MOT_DE_PASSE_BDD_GLPI>`|
 
 <div class="calc-box">
 ⚠️ <strong>Sécurité Post-Installation </strong><br>

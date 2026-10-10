@@ -1,0 +1,59 @@
+# *****************************************************************************
+# Nom         : Infrastructure Git Locale (Gitea)
+# Mainteneur  : KADA Amine
+# Date        : 2026-06-15
+# Composants  : Serveur Web Gitea & Base de données PostgreSQL
+# *****************************************************************************
+
+services:
+  # 1. Serveur Gitea (Application Web et gestion Git)
+  gitea:
+    image: gitea/gitea:1.21
+    restart: unless-stopped
+    environment:
+      - USER_UID=1000
+      - USER_GID=1000
+      - GITEA__database__DB_TYPE=postgres
+      - GITEA__database__HOST=gitea-db:5432
+      - GITEA__database__NAME=gitea
+      - GITEA__database__USER=gitea
+      - GITEA__database__PASSWD=${GITEA_DB_PASSWORD:-<MOT_DE_PASSE_DB_GITEA>}
+    ports:
+      - "3000:3000"
+      # Mappage du port SSH (222 sur l'hôte pour éviter le conflit avec le port 22 du serveur physique)
+      - "222:22"
+    volumes:
+      - gitea_data:/data
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    depends_on:
+      gitea-db:
+        condition: service_healthy
+    networks:
+      - gitea_net
+
+  # 2. Base de données relationnelle dédiée
+  gitea-db:
+    image: postgres:15-alpine
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=gitea
+      - POSTGRES_PASSWORD=${GITEA_DB_PASSWORD:-<MOT_DE_PASSE_DB_GITEA>}
+      - POSTGRES_DB=gitea
+    volumes:
+      - gitea_db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U gitea"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - gitea_net
+
+networks:
+  gitea_net:
+    driver: bridge
+
+volumes:
+  gitea_data:
+  gitea_db:

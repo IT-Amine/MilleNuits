@@ -1,7 +1,7 @@
 # Projet Mille Nuits : Infrastructure Informatique
 
 <div style="margin-top: 20px; border: 1px solid #ccc; padding: 20px; border-radius: 10px; background-color: var(--md-default-bg-color);">
-    <p><strong>Auteur :</strong> Amine & Lucka</p>
+    <p><strong>Auteur :</strong> KADA Amine</p>
     <p><strong>Classe :</strong> BTS SIO 2 - Option SISR</p>
     <p><strong>Date :</strong> 10/10/2026</p>
     <p><strong>Version :</strong> 1.0</p>
@@ -23,9 +23,20 @@ Ce site regroupe l'ensemble des procédures, comparatifs et guides techniques r�
 | **40**  | **Logistique**      | `172.40.2.64`  | `/26` (255.255.255.192) | `172.40.2.127`       | **172.40.2.126**     |
 | **52**  | **Serveurs**        | `172.16.52.0`  |  `/24` (255.255.255.0)  | `172.16.52.255`      | **172.16.52.253**    |
 
-Le projet est divisé en deux grandes situations professionnelles (SP) :
+Le projet est divisé en quatre grandes situations professionnelles (SP) :
 
 ---
+
+---
+
+## SP1 : Gestion de l'infrastructure réseau
+
+Cette SP vise à mettre en place le socle réseau matériel de Mille Nuits, comprenant les interconnexions, le routage et le prototypage de la solution.
+
+**Missions principales :**
+* [Prototypage du réseau](sp1-infrastructure/mise-en-place-du-protypage.md)
+* [Configuration des accès distants (SSH)](sp1-infrastructure/mise-en-place-du-ssh-sur-les-elements-dinter-connexion.md)
+* [Sauvegarde des configurations (TFTP)](sp1-infrastructure/sauvegarde-via-tftp-des-equipements-reseau.md)
 
 ## SP2 : Gestion du Parc Informatique
 
@@ -67,5 +78,22 @@ L'entreprise Mille Nuits ne disposait pas de politique de sécurisation ni de ge
 
 ---
 
+---
+
+## SP4 : Espace de Développement
+
+Afin de soutenir l'équipe de développement de Mille Nuits, cette SP met en œuvre un environnement d'intégration continue et de conteneurisation sécurisé.
+
+**Objectifs principaux :**
+> * Déployer un hôte Docker administrable via Portainer.
+> * Fournir un gestionnaire de code source (Gitea) pour l'équipe.
+> * Sécuriser l'accès physique des développeurs via un réseau Wi-Fi isolé.
+
+**Missions de la SP4 :**
+
+* **Architecture :** [Interface de gestion Docker (ADR)](sp4-developpement/adr-interface-de-gestion-docker-pour-les-developpeurs.md)
+* **Déploiement :** [Installation Docker et Portainer](sp4-developpement/deploiement/installation-docker-sur-mn21.md)
+* **Accès réseau :** [Point d'accès Wi-Fi sécurisé](sp4-developpement/creation-dun-sous-reseau-developpeur-avec-wi-fi-securiser.md)
+
 ## Informations Projet
-**Équipe :** 2 Étudiants (Amine & Lucka)
+**Équipe :** 2 Étudiants (KADA Amine)
