@@ -1,5 +1,14 @@
 # DOCUMENTATION : CONFIGURATION DU RELAIS DHCP
 
+<div style="margin-top: 20px; border: 1px solid #ccc; padding: 20px; border-radius: 10px; background-color: var(--md-default-bg-color);">
+    <p><strong>Auteur :</strong> Amine & Lucka</p>
+    <p><strong>Classe :</strong> BTS SIO 2 - Option SISR</p>
+    <p><strong>Date :</strong> 10/10/2026</p>
+    <p><strong>Version :</strong> 1.0</p>
+</div>
+
+
+
 ## 1. CONTEXTE ET PROBLÉMATIQUE
 
 Dans l'infrastructure Mille Nuits, le serveur DHCP (MN11) est centralisé au sein du VLAN 52 (Serveurs). Par défaut, les requêtes DHCP (qui sont des messages de diffusion "Broadcast") émises par les PC clients des autres VLANs (10, 20, 30, 40, 50) sont bloquées par le routeur. 

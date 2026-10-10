@@ -1,0 +1,105 @@
+[project]
+site_url = "https://it-amine.github.io/MilleNuits"
+site_name = "Mille Nuits Documentation"
+site_description = "Documentation de l'infrastructure Mille Nuits du BTS SIO."
+site_author = "Amine & Lucka"
+
+nav = [
+  { "Accueil" = ["index.md"] },
+  { "SP2 - Gestion du Parc" = [
+    { "Documentation" = [
+      "sp2-parc/documentation/comparatif-editeurs.md",
+      "sp2-parc/documentation/installation-zensical.md"
+    ]},
+    { "Postes Clients" = [
+      "sp2-parc/clients/masterisation-windows.md",
+      "sp2-parc/clients/explication-sysprep.md"
+    ]},
+    { "Déploiement FOG" = [
+      "sp2-parc/deploiement/comparatif-solutions.md",
+      "sp2-parc/deploiement/fonctionnement-fog.md",
+      "sp2-parc/deploiement/installation-serveur-fog.md"
+    ]},
+    { "Support GLPI" = [
+      "sp2-parc/support/presentation-outil-glpi.md",
+      "sp2-parc/support/procedures-incidents.md",
+      "sp2-parc/support/gestion-utilisateurs-glpi.md"
+    ]}
+  ]},
+  { "SP3 - Services AD & DHCP" = [
+    { "Active Directory & DNS" = [
+      "sp3-services/ad-dns/configuration-windows-server-2019.md",
+      "sp3-services/ad-dns/mise-en-place-annuaire.md"
+    ]},
+    { "DHCP" = [
+      "sp3-services/dhcp/theorie-dhcp.md",
+      "sp3-services/dhcp/simulation-cisco-packet-tracer.md",
+      "sp3-services/dhcp/installation-dhcp-isc.md",
+      "sp3-services/dhcp/installation-dhcp-kea.md",
+      "sp3-services/dhcp/configuration-relais-cisco.md"
+    ]},
+    { "Stockage" = [
+      "sp3-services/stockage/installation-nas-truenas.md"
+    ]}
+  ]}
+]
+
+copyright = "Copyright &copy; 2026 Amine & Lucka"
+repo_url = "https://github.com/IT-Amine/MilleNuits"
+repo_name = "IT-Amine/MilleNuits"
+edit_uri = "edit/main/docs/"
+
+[project.theme]
+favicon = "assets/logo.png"
+language = "fr"
+logo = "assets/logo.png"
+features = [
+  "content.action.edit",
+  "content.code.copy",
+  "content.tabs.link",
+  "navigation.footer",
+  "navigation.indexes",
+  "navigation.path",
+  "navigation.sections",
+  "navigation.tabs",
+  "navigation.top",
+  "search.highlight"
+]
+
+[project.theme.font]
+text = "Inter"
+code = "JetBrains Mono"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Passer au thème clair"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Passer au thème sombre"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Passer aux préférences système"
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/IT-Amine"
+
+[project.markdown_extensions]
+tables = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+pymdownx.details = {}
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.superfences.custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+]
+pymdownx.tabbed.alternate_style = true

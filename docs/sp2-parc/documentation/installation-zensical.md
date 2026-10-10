@@ -40,6 +40,15 @@ tr:nth-child(even) { background-color: #f9fafb; }
 
 # Installation de l'Environnement de Documentation
 
+<div style="margin-top: 20px; border: 1px solid #ccc; padding: 20px; border-radius: 10px; background-color: var(--md-default-bg-color);">
+    <p><strong>Auteur :</strong> Amine & Lucka</p>
+    <p><strong>Classe :</strong> BTS SIO 2 - Option SISR</p>
+    <p><strong>Date :</strong> 10/10/2026</p>
+    <p><strong>Version :</strong> 1.0</p>
+</div>
+
+
+
 Ce guide détaille la procédure complète pour installer et configurer l'environnement de travail technique du projet **Mille Nuits**.
 
 ## 1. Prérequis Techniques

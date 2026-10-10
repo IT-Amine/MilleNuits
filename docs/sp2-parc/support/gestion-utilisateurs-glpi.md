@@ -41,6 +41,15 @@ tr:nth-child(even) { background-color: #f9fafb; }
 
 # DOCUMENTATION : GESTION DES UTILISATEURS GLPI
 
+<div style="margin-top: 20px; border: 1px solid #ccc; padding: 20px; border-radius: 10px; background-color: var(--md-default-bg-color);">
+    <p><strong>Auteur :</strong> Amine & Lucka</p>
+    <p><strong>Classe :</strong> BTS SIO 2 - Option SISR</p>
+    <p><strong>Date :</strong> 10/10/2026</p>
+    <p><strong>Version :</strong> 1.0</p>
+</div>
+
+
+
 Ce document détaille la stratégie de gestion des accès et la procédure de création des comptes dans le système de Helpdesk (GLPI) pour l'infrastructure Mille Nuits. L'objectif est de garantir le principe de moindre privilège selon le rôle de chaque collaborateur.
 
 ## 1. MATRICE DES RÔLES ET PROFILS
@@ -49,10 +58,10 @@ Afin de sécuriser l'accès aux données et de simplifier l'interface pour les u
 
 | Type d'Utilisateur       | Identifiant (Exemple) | Password        | Profil GLPI      | Droits et Permissions Accordés                                                                                                |
 | :----------------------- | :-------------------- | --------------- | :--------------- | :---------------------------------------------------------------------------------------------------------------------------- |
-| **Administrateur**       | `admin.sys`           | `@dmin26!`      | **Super-Admin**  | Accès total. Configuration du système, gestion des règles, création des utilisateurs et habilitations.                        |
-| **Chef Informatique**    | `manager.it`          | `m@nager26!`    | **Supervisor**   | Gestion globale du parc et du support. Peut assigner les tickets aux techniciens et consulter les statistiques.               |
-| **Support (Technicien)** | `tech.support`        | `supp0rt26!`    | **Technician**   | Gestion de l'inventaire matériel et traitement/résolution des tickets d'incidents. Ne peut pas modifier la structure de GLPI. |
-| **Employé (Client)**     | `u.ventes`            | `millenuits26!` | **Self-Service** | Accès restreint au portail simplifié. Permet uniquement de créer un ticket d'assistance et de suivre ses propres demandes.    |
+| **Administrateur**       | `admin.sys`           | `<MOT_DE_PASSE_ADMIN_GLPI>`      | **Super-Admin**  | Accès total. Configuration du système, gestion des règles, création des utilisateurs et habilitations.                        |
+| **Chef Informatique**    | `manager.it`          | `<MOT_DE_PASSE_MANAGER_GLPI>`    | **Supervisor**   | Gestion globale du parc et du support. Peut assigner les tickets aux techniciens et consulter les statistiques.               |
+| **Support (Technicien)** | `tech.support`        | `<MOT_DE_PASSE_TECH_GLPI>`    | **Technician**   | Gestion de l'inventaire matériel et traitement/résolution des tickets d'incidents. Ne peut pas modifier la structure de GLPI. |
+| **Employé (Client)**     | `u.ventes`            | `<MOT_DE_PASSE_USER_GLPI>` | **Self-Service** | Accès restreint au portail simplifié. Permet uniquement de créer un ticket d'assistance et de suivre ses propres demandes.    |
 
 ## 2. PROCÉDURE DE CRÉATION D'UN COMPTE
 

@@ -40,6 +40,15 @@ tr:nth-child(even) { background-color: #f9fafb; }
 
 # Installation et Configuration de FOG (Serveur MN08)
 
+<div style="margin-top: 20px; border: 1px solid #ccc; padding: 20px; border-radius: 10px; background-color: var(--md-default-bg-color);">
+    <p><strong>Auteur :</strong> Amine & Lucka</p>
+    <p><strong>Classe :</strong> BTS SIO 2 - Option SISR</p>
+    <p><strong>Date :</strong> 10/10/2026</p>
+    <p><strong>Version :</strong> 1.0</p>
+</div>
+
+
+
 Cette documentation décrit la procédure technique pour transformer le serveur **MN08** en serveur de déploiement FOG Project, conformément aux besoins de l'infrastructure **Mille Nuits**.
 
 ---
@@ -110,7 +119,7 @@ Une fois le script terminé en console, il demande de se rendre sur une page Web
     
     - **User :** `admin.sys`
         
-    - **Password :** `@dmin26!`
+    - **Password :** `<MOT_DE_PASSE_ADMIN_FOG>`
         
 
 > **Sécurité :** La première action réalisée a été de changer le mot de passe par défaut dans _User Management_.

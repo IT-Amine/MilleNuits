@@ -1,5 +1,14 @@
 # DOCUMENTATION : DÉPLOIEMENT DU SERVEUR KEA DHCP (MN11)
 
+<div style="margin-top: 20px; border: 1px solid #ccc; padding: 20px; border-radius: 10px; background-color: var(--md-default-bg-color);">
+    <p><strong>Auteur :</strong> Amine & Lucka</p>
+    <p><strong>Classe :</strong> BTS SIO 2 - Option SISR</p>
+    <p><strong>Date :</strong> 10/10/2026</p>
+    <p><strong>Version :</strong> 1.0</p>
+</div>
+
+
+
 L'utilisation du service moderne Kea DHCP a été privilégiée en remplacement de l'historique ISC DHCP Server, ce dernier étant obsolète (End of Life). La configuration s'opère désormais via un format JSON structuré.
 
 ## 1. PRÉREQUIS
@@ -100,12 +109,24 @@ _Sauvegarder et quitter (Ctrl+O, Entrée, Ctrl+X)._
 
 ## 4. DÉMARRAGE ET VÉRIFICATION
 
-Lancer le service Kea DHCP et vérifier son état de fonctionnement :
+Toujours valider la syntaxe JSON avant de redémarrer le service Kea DHCP :
 
+```bash
+kea-dhcp4 -t /etc/kea/kea-dhcp4.conf
+```
+
+Si le test retourne `Configuration parsing successful`, relancer le service :
 
 ```bash
 systemctl restart kea-dhcp4-server
 systemctl status kea-dhcp4-server
+```
+
+### Plan de Retour Arrière (Rollback)
+En cas d'erreur bloquante après modification, restaurer la sauvegarde :
+```bash
+cp /etc/kea/kea-dhcp4.conf.backup /etc/kea/kea-dhcp4.conf
+systemctl restart kea-dhcp4-server
 ```
 
 Le service doit indiquer **`active (running)`**.

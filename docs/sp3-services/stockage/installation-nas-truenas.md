@@ -1,5 +1,14 @@
 # Fiche de Procédure et de Recette : Intégration NAS et Partages Réseau
 
+<div style="margin-top: 20px; border: 1px solid #ccc; padding: 20px; border-radius: 10px; background-color: var(--md-default-bg-color);">
+    <p><strong>Auteur :</strong> Amine & Lucka</p>
+    <p><strong>Classe :</strong> BTS SIO 2 - Option SISR</p>
+    <p><strong>Date :</strong> 10/10/2026</p>
+    <p><strong>Version :</strong> 1.0</p>
+</div>
+
+
+
 **Projet :** Mille Nuits
 **Infrastructure :** Windows Server 2019 (MN01) & TrueNAS SCALE (MN03)
 **Objectif :** Intégrer le NAS au domaine Active Directory, provisionner les partages réseau et automatiser le montage via GPO avec gestion stricte des droits (NTFS).

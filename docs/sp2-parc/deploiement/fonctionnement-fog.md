@@ -42,6 +42,15 @@ tr:nth-child(even) { background-color: #f9fafb; }
 
 # Fonctionnement de FOG & Interaction Sysprep
 
+<div style="margin-top: 20px; border: 1px solid #ccc; padding: 20px; border-radius: 10px; background-color: var(--md-default-bg-color);">
+    <p><strong>Auteur :</strong> Amine & Lucka</p>
+    <p><strong>Classe :</strong> BTS SIO 2 - Option SISR</p>
+    <p><strong>Date :</strong> 10/10/2026</p>
+    <p><strong>Version :</strong> 1.0</p>
+</div>
+
+
+
 ## 1. Qu'est-ce que FOG Project ?
 
 **FOG** (Free Open Source Ghost) est une solution de clonage et de gestion de parc informatique open-source.
@@ -81,7 +90,7 @@ C'est ici que tout se joue. Voici la chronologie exacte des opérations pour ré
 1.  On déclare l'adresse MAC de la VM Master dans l'interface Web de FOG.
 2.  On programme une tâche de **"Capture"**.
 3.  On allume la VM Master en **Boot Réseau (PXE)**.
-    * ⚠️ *Important :* Elle ne doit pas démarrer sur son disque dur (sinon Sysprep s'annule), mais sur la carte réseau.
+    * ⚠️ *Important :* Elle ne doit pas redémarrer sur son disque dur. Si cela se produit, Windows lancera la phase OOBE (spécialisation de l'OS) et générera un nouveau SID, rendant l'image inutilisable pour un déploiement générique. Il faut impérativement démarrer sur la carte réseau (PXE).
 4.  FOG prend le relais, lit le disque dur "sysprepé", le compresse et l'envoie sur le serveur MN08.
 
 ### Phase C : Le Déploiement (Côté Clients)

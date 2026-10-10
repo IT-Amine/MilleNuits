@@ -1,4 +1,13 @@
 # 📂 PROJET MILLE NUITS - SP3
+
+<div style="margin-top: 20px; border: 1px solid #ccc; padding: 20px; border-radius: 10px; background-color: var(--md-default-bg-color);">
+    <p><strong>Auteur :</strong> Amine & Lucka</p>
+    <p><strong>Classe :</strong> BTS SIO 2 - Option SISR</p>
+    <p><strong>Date :</strong> 10/10/2026</p>
+    <p><strong>Version :</strong> 1.0</p>
+</div>
+
+
 **Documentation :** Arborescence Active Directory (MN01)
 **Date :** 02/04/2026
 **Auteur :** KADA Amine

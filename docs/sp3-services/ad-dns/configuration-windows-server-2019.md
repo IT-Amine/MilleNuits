@@ -1,5 +1,14 @@
 # DOCUMENTATION : CONFIGURATION ET MISE EN PLACE DE L'ACTIVE DIRECTORY (VM NUTANIX)
 
+<div style="margin-top: 20px; border: 1px solid #ccc; padding: 20px; border-radius: 10px; background-color: var(--md-default-bg-color);">
+    <p><strong>Auteur :</strong> Amine & Lucka</p>
+    <p><strong>Classe :</strong> BTS SIO 2 - Option SISR</p>
+    <p><strong>Date :</strong> 10/10/2026</p>
+    <p><strong>Version :</strong> 1.0</p>
+</div>
+
+
+
 ## 1. CONFIGURATION DE LA MACHINE VIRTUELLE
 La machine virtuelle a été déployée sur l'infrastructure Nutanix avec les caractéristiques matérielles suivantes, permettant de faire fonctionner de manière fluide un contrôleur de domaine sous Windows Server :
 
@@ -26,9 +35,9 @@ Dans le cadre du durcissement du serveur, les mots de passe par défaut ont ét�
 🔐 <strong>Politique de mots de passe :</strong>
 <ul>
 <br>
-<li><strong>Compte Administrateur :</strong> L'ancien mot de passe (<code>Etudiant_007</code>) a été remplacé par <code>Mille_Nuits26!</code>.</li>
+<li><strong>Compte Administrateur :</strong> L'ancien mot de passe (<code><ANCIEN_MOT_DE_PASSE></code>) a été remplacé par <code><MOT_DE_PASSE_ADMIN_AD></code>.</li>
 <br>
-<li><strong>Mode DSRM :</strong> Le mot de passe du Directory Services Restore Mode (utilisé en cas de crash et de restauration de l'annuaire) a également été défini sur <code>Mille_Nuits26!</code>.</li>
+<li><strong>Mode DSRM :</strong> Le mot de passe du Directory Services Restore Mode (utilisé en cas de crash et de restauration de l'annuaire) a également été défini sur <code><MOT_DE_PASSE_ADMIN_AD></code>.</li>
 </ul>
 </div>
 
@@ -56,7 +65,7 @@ Une fois le rôle installé, le serveur a été promu pour créer le nouveau dom
 
 4. Saisie du nom de domaine racine : `MN01.lan`.
 
-5. Saisie du mot de passe de restauration DSRM (`Mille_Nuits26!`).
+5. Saisie du mot de passe de restauration DSRM (`<MOT_DE_PASSE_ADMIN_AD>`).
 
 6. Lancement des vérifications préalables, puis clic sur **Installer**. Le serveur redémarre automatiquement à la fin du processus.
 
@@ -80,11 +89,11 @@ Afin de respecter l'organisation fonctionnelle du domaine, un groupe de sécurit
 
 | Unité d'Organisation | Utilisateur | Identifiant / UPN | Mot de passe | Mot de passe modifier |
 | :------------------- | :---------- | :---------------- | :----------- | --------------------- |
-| **Administratif**    | a.martin    | `MN01\a.martin`   | M@rtin1234   | Mille_Nuits26!        |
-| **Logistique**       | c.durand    | `MN01\c.durand`   | Dur@nd1234   | //                    |
-| **Direction**        | l.petit     | `MN01\l.petit`    | Pet@t1234    | //                    |
-| **Vente**            | v.leroy     | `MN01\v.leroy`    | Lero@1234    | //                    |
-| **Production**       | p.moreau    | `MN01\p.moreau`   | More@u1234   | //                    |
+| **Administratif**    | a.martin    | `MN01\a.martin`   | <MOT_DE_PASSE_UTILISATEUR>   | <MOT_DE_PASSE_ADMIN_AD>        |
+| **Logistique**       | c.durand    | `MN01\c.durand`   | <MOT_DE_PASSE_UTILISATEUR>   | //                    |
+| **Direction**        | l.petit     | `MN01\l.petit`    | <MOT_DE_PASSE_UTILISATEUR>    | //                    |
+| **Vente**            | v.leroy     | `MN01\v.leroy`    | <MOT_DE_PASSE_UTILISATEUR>    | //                    |
+| **Production**       | p.moreau    | `MN01\p.moreau`   | <MOT_DE_PASSE_UTILISATEUR>   | //                    |
 *Mot de passe modifier, c'est lors de la première connexion il demande de modifier le mot de passe.*
 
 <div class="calc-box">
@@ -94,21 +103,23 @@ L'intégration des utilisateurs dans leurs groupes respectifs permet une gestion
 
 ## 6. SÉCURISATION DU SERVICE DNS
 
-Le rôle DNS ayant été installé conjointement à l'AD DS, une configuration de sécurité spécifique a été appliquée : **la récursivité DNS a été désactivée.**
+Le rôle DNS ayant été installé conjointement à l'AD DS, une configuration de sécurité spécifique a été appliquée : **des redirecteurs (Forwarders) sécurisés ont été configurés**.
 
-### 6.1. Procédure de désactivation
+### 6.1. Procédure de sécurisation
 
 1. Ouverture de la console **Gestionnaire DNS** depuis les Outils d'administration.
 
 2. Clic droit sur le nom du serveur (`MN01`) et sélection de **Propriétés**.
 
-3. Dans l'onglet **Avancé**, la case **Désactiver la récursivité (désactive également les redirecteurs)** a été cochée, puis validée.
+3. Dans l'onglet **Redirecteurs**, ajout d'un serveur externe sécurisé (ex: Quad9 `9.9.9.9`).
+
+4. Dans l'onglet **Avancé**, la case **Désactiver la récursivité** n'a **pas** été cochée.
 
 ### 6.2. Objectifs de cette configuration
 Cette action permet de :
 
-* Empêcher le serveur de résoudre des noms externes (Internet).
+* Conserver l'accès à Internet pour les clients en relayant les requêtes externes non connues.
 
-* Limiter les réponses aux seules requêtes internes au domaine `MN01.lan`.
+* Résoudre les noms internes au domaine `MN01.lan` localement.
 
-* Améliorer la sécurité globale du service DNS en évitant les attaques de type *DNS Amplification*. Le serveur fonctionne ainsi uniquement pour sa zone locale.
+* Améliorer la sécurité globale du service DNS en évitant les attaques de type *DNS Cache Poisoning* grâce à l'utilisation de serveurs amonts réputés fiables.
