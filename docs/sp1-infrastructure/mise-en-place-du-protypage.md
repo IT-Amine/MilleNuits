@@ -47,14 +47,14 @@ Pc VENTE : 172.40.2.1       Masque : 255.255.255.192
 
 **Adressage Serveurs :**
 ```
-Adresse Réseau : 172.16.51.0 /24
-MN01 (AD,DNS,DHCP) : 172.16.51.1        Masque : 255.255.255.0
-MN02 Messagerie : 172.16.51.2           Masque : 255.255.255.0
-MN03 PGI : 172.16.51.3                  Masque : 255.255.255.0
-MN04 Web : 172.16.51.4                  Masque : 255.255.255.0
-MN05 Sauvegarde : 172.16.51.5           Masque : 255.255.255.0
-MN06 Gestion d'incidents : 172.16.51.6  Masque : 255.255.255.0
-MN07 Serveur de fichiers : 172.16.51.7  Masque : 255.255.255.0
+Adresse Réseau : 172.16.52.0 /24
+MN01 (AD,DNS,DHCP) : 172.16.52.1        Masque : 255.255.255.0
+MN02 Messagerie : 172.16.52.2           Masque : 255.255.255.0
+MN03 PGI : 172.16.52.3                  Masque : 255.255.255.0
+MN04 Web : 172.16.52.4                  Masque : 255.255.255.0
+MN05 Sauvegarde : 172.16.52.5           Masque : 255.255.255.0
+MN06 Gestion d'incidents : 172.16.52.6  Masque : 255.255.255.0
+MN07 Serveur de fichiers : 172.16.52.7  Masque : 255.255.255.0
 ```
 
 ### 2. Plan de nommage :
@@ -81,7 +81,7 @@ MN07 Serveur de fichiers : 172.16.51.7  Masque : 255.255.255.0
 | C                                                         | 172.40.1.128           | 255.255.255.128 | 172.40.1.254   | 172.40.1.254                    |
 | C                                                         | 172.40.2.0             | 255.255.255.192 | 172.40.2.62    | 172.40.2.62                     |
 | C                                                         | 172.40.2.64            | 255.255.255.192 | 172.40.2.126   | 172.40.2.126                    |
-| C                                                         | 172.16.51.0            | 255.255.255.0   | 172.16.51.253  | 172.16.51.253                   |
+| C                                                         | 172.16.52.0            | 255.255.255.0   | 172.16.52.253  | 172.16.52.253                   |
 | S                                                         | 0.0.0.0                | 0.0.0.0         | 172.16.31.254  | 0.0.0.0                         |
 
 ---
@@ -259,9 +259,9 @@ rt_millenuits-01(config-subif)# ip nat inside
 rt_millenuits-01(config-subif)# ex
 
 ! Interface du vlan Serveur
-rt_millenuits-01(config)# interface g0/0.51
-rt_millenuits-01(config-subif)# encapsulation dot1Q 51
-rt_millenuits-01(config-subif)# ip address 172.16.51.253 255.255.255.0
+rt_millenuits-01(config)# interface g0/0.52
+rt_millenuits-01(config-subif)# encapsulation dot1Q 52
+rt_millenuits-01(config-subif)# ip address 172.16.52.253 255.255.255.0
 rt_millenuits-01(config-subif)# ip nat inside
 rt_millenuits-01(config-subif)# ex
 
@@ -273,7 +273,7 @@ rt_millenuits-01(config)# ip route 0.0.0.0 0.0.0.0 172.16.31.254
 ```cisco
 ! Créer les ACL qui autorise les réseaux à sortir
 rt_millenuits-01(config)# access-list 1 permit 172.40.0.0 0.0.255.255
-rt_millenuits-01(config)# access-list 1 permit 172.16.51.0 0.0.0.255
+rt_millenuits-01(config)# access-list 1 permit 172.16.52.0 0.0.0.255
 
 ! Activer la traduction NAT
 rt_millenuits-01(config)# ip nat inside source list 1 interface GigabitEthernet0/1 overload

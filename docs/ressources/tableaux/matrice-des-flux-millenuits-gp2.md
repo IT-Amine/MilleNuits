@@ -1,4 +1,4 @@
-# Matrice des flux - Millenuits GP1
+# Matrice des flux - Millenuits GP2
 
 <div style="margin-top: 20px; border: 1px solid #ccc; padding: 20px; border-radius: 10px; background-color: var(--md-default-bg-color);">
     <p><strong>Auteur :</strong> KADA Amine</p>
@@ -26,5 +26,5 @@
 |**VLAN 10 - Production** (172.40.0.0/24)|Autres VLANs|IP (Tout)|Deny|Routeur (Vlan10) - IN|
 |**Tous les VLANs internes**|Serveur MN01 (AD/DNS/DHCP)|UDP 53, 67, 68|Permit|Routeur (Vlans respectifs) - IN|
 |**VLANs 12 & 13** (Admin / Ventes)|Serveur MN03 (PGI)|TCP (Ports PGI)|Permit|Routeur (Vlan12 & 13) - IN|
-|**Tous les VLANs internes**|Serveur MN06 (Incidents) 172.16.51.6|TCP 80, 443|Permit|Routeur (Vlans respectifs) - IN|
+|**Tous les VLANs internes**|Serveur MN06 (Incidents) 172.16.52.6|TCP 80, 443|Permit|Routeur (Vlans respectifs) - IN|
 |**Any**|**Any**|IP (Tout)|Deny|Règle implicite (Fin d'ACL)|

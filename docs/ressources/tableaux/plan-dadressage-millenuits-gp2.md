@@ -1,4 +1,4 @@
-# Plan d'adressage - Millenuits GP1
+# Plan d'adressage - Millenuits GP2
 
 <div style="margin-top: 20px; border: 1px solid #ccc; padding: 20px; border-radius: 10px; background-color: var(--md-default-bg-color);">
     <p><strong>Auteur :</strong> KADA Amine</p>
@@ -29,5 +29,5 @@
 | Invité        | 15          | 172.40.2.128       | 255.255.255.240<br>/28   | 172.40.2.142   | 172.40.2.143              |
 | Management    | 99          | 172.40.2.144       | 255.255.255.240<br>/28   | 172.40.2.158   | 172.40.2.159              |
 | Developpeur   | 16          | 172.40.2.160       | 255.255.255.240<br>/28   | 172.40.2.174   | 172.40.2.175              |
-| Serveurs      | 51          | 172.16.51.0        | 255.255.255.0<br>/24     | 172.16.51.252  | 172.16.51.255             |
+| Serveurs      | 52          | 172.16.52.0        | 255.255.255.0<br>/24     | 172.16.52.252  | 172.16.52.255             |
 | DMZ           | 53          | 10.10.10.0         | 255.255.255.0<br>/24     | 10.10.10.254   | 10.10.10.255              |

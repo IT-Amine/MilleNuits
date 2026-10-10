@@ -59,7 +59,7 @@ interface GigabitEthernet0/1.10
  description VLAN Production
  encapsulation dot1Q 10
  ip address 172.40.0.254 255.255.255.0
- ip helper-address 172.16.51.11
+ ip helper-address 172.16.52.11
  ip nat inside
  ip virtual-reassembly in
 !
@@ -67,7 +67,7 @@ interface GigabitEthernet0/1.11
  description VLAN Autres
  encapsulation dot1Q 11
  ip address 172.40.1.126 255.255.255.128
- ip helper-address 172.16.51.11
+ ip helper-address 172.16.52.11
  ip nat inside
  ip virtual-reassembly in
 !
@@ -75,7 +75,7 @@ interface GigabitEthernet0/1.12
  description VLAN Administratif
  encapsulation dot1Q 12
  ip address 172.40.1.254 255.255.255.128
- ip helper-address 172.16.51.11
+ ip helper-address 172.16.52.11
  ip nat inside
  ip virtual-reassembly in
 !
@@ -83,7 +83,7 @@ interface GigabitEthernet0/1.13
  description VLAN VentesEtudes
  encapsulation dot1Q 13
  ip address 172.40.2.62 255.255.255.192
- ip helper-address 172.16.51.11
+ ip helper-address 172.16.52.11
  ip nat inside
  ip virtual-reassembly in
 !
@@ -91,14 +91,14 @@ interface GigabitEthernet0/1.14
  description VLAN Logistique
  encapsulation dot1Q 14
  ip address 172.40.2.126 255.255.255.192
- ip helper-address 172.16.51.11
+ ip helper-address 172.16.52.11
  ip nat inside
 !
 interface GigabitEthernet0/1.15
  description VLAN Invite
  encapsulation dot1Q 15
  ip address 172.40.2.142 255.255.255.240
- ip helper-address 172.16.51.11
+ ip helper-address 172.16.52.11
  ip nat inside
  ip virtual-reassembly in
 !
@@ -106,15 +106,15 @@ interface GigabitEthernet0/1.16
  description VLAN Developpeur
  encapsulation dot1Q 16
  ip address 172.40.2.174 255.255.255.240
- ip helper-address 172.16.51.11
+ ip helper-address 172.16.52.11
  ip nat inside
  ip access-group Filtrage_Dev in
  ip virtual-reassembly in
 !
-interface GigabitEthernet0/1.51
+interface GigabitEthernet0/1.52
  description VLAN Serveurs
- encapsulation dot1Q 51
- ip address 172.16.51.252 255.255.255.0
+ encapsulation dot1Q 52
+ ip address 172.16.52.252 255.255.255.0
  ip nat inside
  ip virtual-reassembly in
 !
@@ -153,8 +153,8 @@ ip route 0.0.0.0 0.0.0.0 172.16.31.254
 !
 ip access-list extended DMZ
  remark Autorisation requetes DNS vers serveur interne
- permit udp 10.10.10.0 0.0.0.255 host 172.16.51.1 eq 53
- permit tcp 10.10.10.0 0.0.0.255 host 172.16.51.1 eq 53
+ permit udp 10.10.10.0 0.0.0.255 host 172.16.52.1 eq 53
+ permit tcp 10.10.10.0 0.0.0.255 host 172.16.52.1 eq 53
  remark Autorisation des reponses
  permit tcp 10.10.10.0 0.0.0.255 172.16.0.0 0.0.255.255 established
  permit tcp 10.10.10.0 0.0.0.255 172.40.0.0 0.0.255.255 established
@@ -186,7 +186,7 @@ ip access-list standard NAT
  remark Utilisateurs
  permit 172.40.0.0 0.0.255.255
  remark Serveurs
- permit 172.16.51.0 0.0.0.255
+ permit 172.16.52.0 0.0.0.255
 !
 !
 !

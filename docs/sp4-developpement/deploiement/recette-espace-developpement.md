@@ -89,7 +89,7 @@ Commentaire :
 
 **Description du test** :
 
-> Vérifier que les accès à l'espace de développement sont limités aux seuls développeurs autorisés[cite: 70]. Se connecter à l'interface d'administration `https://172.16.51.21:9443` en utilisant les identifiants d'un compte développeur standard (non-administrateur).
+> Vérifier que les accès à l'espace de développement sont limités aux seuls développeurs autorisés[cite: 70]. Se connecter à l'interface d'administration `https://172.16.52.21:9443` en utilisant les identifiants d'un compte développeur standard (non-administrateur).
 
 **Résultats Attendus** :
 
@@ -138,7 +138,7 @@ Commentaire :
 **Description du test** :
 
 > Vérifier que l'application de test déployée, incluant un service web et une base de données, est fonctionnelle et accessible depuis le sous-réseau des développeurs. Ouvrir un navigateur depuis un poste de travail développeur et naviguer vers :
-> `http://172.16.51.21:8080`
+> `http://172.16.52.21:8080`
 
 **Résultats Attendus** :
 

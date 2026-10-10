@@ -75,9 +75,9 @@ nav = [
   ]},
   { "Ressources" = [
     { "Tableaux" = [
-      "ressources/tableaux/plan-dadressage-millenuits-gp1.md",
-      "ressources/tableaux/table-de-routage-millenuits-gp1.md",
-      "ressources/tableaux/matrice-des-flux-millenuits-gp1.md"
+      "ressources/tableaux/plan-dadressage-millenuits-gp2.md",
+      "ressources/tableaux/table-de-routage-millenuits-gp2.md",
+      "ressources/tableaux/matrice-des-flux-millenuits-gp2.md"
     ]},
     { "Configurations" = [
       "ressources/configuration/repertoire.md",

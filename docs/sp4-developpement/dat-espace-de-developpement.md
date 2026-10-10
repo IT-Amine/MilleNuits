@@ -73,7 +73,7 @@ L'ensemble des services applicatifs est conteneurisé et tourne sur le moteur Do
 
 - **Docker Engine** — Moteur de conteneurisation. Fournit l'isolation des processus, la gestion des ressources et le réseau virtuel entre conteneurs. Durci via `daemon.json` (voir section C).
 
-- **Portainer CE `2.40.0-alpine`** — Interface graphique web d'administration Docker. Accessible sur `https://172.16.51.21:9443`. Permet aux développeurs de déployer et gérer leurs stacks de conteneurs sans accès SSH au serveur. Son accès au socket Docker (`/var/run/docker.sock`) est rendu possible par une exception de namespace (`--userns=host`).
+- **Portainer CE `2.40.0-alpine`** — Interface graphique web d'administration Docker. Accessible sur `https://172.16.52.21:9443`. Permet aux développeurs de déployer et gérer leurs stacks de conteneurs sans accès SSH au serveur. Son accès au socket Docker (`/var/run/docker.sock`) est rendu possible par une exception de namespace (`--userns=host`).
 
 - **Gitea `1.21`** — Forge Git auto-hébergée. Accessible sur `http://gitea.millenuits.lan:3000`. Sert de dépôt central pour le code source et les fichiers de configuration Docker Compose. Exposé également en SSH sur le port `222` de l'hôte pour éviter le conflit avec le port SSH système (`22`).
 
@@ -94,8 +94,8 @@ L'ensemble des services applicatifs est conteneurisé et tourne sur le moteur Do
 ```
 ip access-list extended DMZ
  remark Autorisation requetes DNS vers serveur interne
- permit udp 10.10.10.0 0.0.0.255 host 172.16.51.1 eq domain
- permit tcp 10.10.10.0 0.0.0.255 host 172.16.51.1 eq domain
+ permit udp 10.10.10.0 0.0.0.255 host 172.16.52.1 eq domain
+ permit tcp 10.10.10.0 0.0.0.255 host 172.16.52.1 eq domain
  remark Autorisation des reponses
  permit tcp 10.10.10.0 0.0.0.255 172.16.0.0 0.0.255.255 established
  permit tcp 10.10.10.0 0.0.0.255 172.40.0.0 0.0.255.255 established
@@ -110,7 +110,7 @@ ip access-list extended DMZ
 
 **Synthèse des règles :**
 
--  DNS autorisé — Les développeurs (`10.10.10.0/24`) peuvent résoudre des noms de domaine internes en interrogeant uniquement le serveur DNS désigné (`172.16.51.1`) en UDP et TCP sur le port `53`. Cela leur permet d'accéder aux services MN21 via leur nom DNS (ex : `gitea.millenuits.lan`) plutôt que par IP.
+-  DNS autorisé — Les développeurs (`10.10.10.0/24`) peuvent résoudre des noms de domaine internes en interrogeant uniquement le serveur DNS désigné (`172.16.52.1`) en UDP et TCP sur le port `53`. Cela leur permet d'accéder aux services MN21 via leur nom DNS (ex : `gitea.millenuits.lan`) plutôt que par IP.
 -  Réponses TCP établies autorisées — Le mot-clé `established` permet uniquement le retour de connexions TCP initiées par les développeurs (le flag ACK est présent). Aucune connexion ne peut être initiée depuis le SI vers le sous-réseau développeurs.
 -  ICMP echo-reply autorisé — Seules les réponses `ping` (echo-reply) provenant du SI sont autorisées en retour. Les développeurs peuvent donc tester la connectivité vers MN21, mais le SI ne peut pas initier de ping vers leur poste.
 -  Flux IP initiés bloqués — Toute tentative de connexion initiée par un développeur vers `172.16.0.0/16` ou `172.40.0.0/16` (hors DNS et réponses établies) est bloquée. Cela empêche tout accès direct aux serveurs de production ou aux autres VLANs.
@@ -177,7 +177,7 @@ Le workflow se déroule en cinq étapes, entièrement au sein du serveur MN21 is
 
 **Exemple concret — Déploiement d'une application PHP + MariaDB :**
 
-Un développeur souhaite tester une nouvelle version de son application. Il modifie son code PHP et met à jour son fichier `docker-compose.yml` pour pointer vers la nouvelle image. Il pousse ses changements sur Gitea (`git push`). Il se connecte ensuite sur Portainer, navigue vers sa Stack et clique sur **Pull and redeploy** : Portainer va chercher la dernière version du `docker-compose.yml` sur Gitea et redémarre les conteneurs avec les nouveaux paramètres. En moins d'une minute, le développeur peut accéder à `http://172.16.51.21:8080` pour valider son application.
+Un développeur souhaite tester une nouvelle version de son application. Il modifie son code PHP et met à jour son fichier `docker-compose.yml` pour pointer vers la nouvelle image. Il pousse ses changements sur Gitea (`git push`). Il se connecte ensuite sur Portainer, navigue vers sa Stack et clique sur **Pull and redeploy** : Portainer va chercher la dernière version du `docker-compose.yml` sur Gitea et redémarre les conteneurs avec les nouveaux paramètres. En moins d'une minute, le développeur peut accéder à `http://172.16.52.21:8080` pour valider son application.
 
 ### Responsabilités du développeur
 

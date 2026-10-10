@@ -33,7 +33,7 @@
 
 ## A. Initialisation et Sécurisation de l'accès
 
-1.  **Définition du compte de secours Administrateur.** Lors de la première connexion sur `https://172.16.51.21:9443`, un compte d'urgence doit être créé. Ce compte ne sera utilisé qu'en cas de perte d'accès aux comptes nominatifs.
+1.  **Définition du compte de secours Administrateur.** Lors de la première connexion sur `https://172.16.52.21:9443`, un compte d'urgence doit être créé. Ce compte ne sera utilisé qu'en cas de perte d'accès aux comptes nominatifs.
 
     * Générer un nom d'utilisateur non standard (éviter "admin") via Bitwarden.
     * Générer un mot de passe très fort (ex: 30 caractères) via Bitwarden et le sauvegarder dans le coffre-fort de l'équipe système.
