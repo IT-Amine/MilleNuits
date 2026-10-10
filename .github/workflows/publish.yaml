@@ -1,8 +1,9 @@
-name: Deploy MkDocs
+name: Deploy Zensical
 on:
   push:
     branches:
       - master
+      - main
   workflow_dispatch:
 
 permissions:
@@ -25,9 +26,9 @@ jobs:
         with:
           python-version: 3.11
       - name: Install dependencies
-        run: pip install mkdocs-material
-      - name: Build MkDocs
-        run: mkdocs build
+        run: pip install zensical
+      - name: Build Zensical
+        run: zensical build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
